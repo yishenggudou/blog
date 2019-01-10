@@ -16,7 +16,7 @@ stages:
 sit_build_job:
   stage: build
   script:
-  - ./build.doc.sh
+  - sh ./build.doc.sh
   only:
   - master
 
