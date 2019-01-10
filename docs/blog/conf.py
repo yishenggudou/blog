@@ -26,9 +26,6 @@ sys.path.insert(0, os.path.join(site_package_path, 'sphinxcontrib/unicode_ids'))
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, PROJECT_DIR)
 sys.path.insert(0, os.path.join(PROJECT_DIR, 'libs'))
-import ablog
-import alabaster
-import nbsphinx
 os.environ["PATH"] = "{0}:{1}".format(PROJECT_DIR, os.environ["PATH"])
 # -- General configuration ------------------------------------------------
 
@@ -257,7 +254,7 @@ from better import better_theme_path
 html_theme_path = [better_theme_path]
 html_theme = 'better'
 
-extensions = ['sphinx_sitemap']
+extensions += ['sphinx_sitemap']
 
 
 def setup(app):

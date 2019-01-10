@@ -10,12 +10,15 @@
     :maxdepth: 2
     :caption: Contents:
 
-    intro/index.rst
-    architecture/index.rst
-    project/index.rst
-    api/index.rst
-    deploy/index.rst
-    releases/index.rst
+    computers/index.rst
+    arithmetic/index.rst
+    pattern/index.rst
+    product/index.rst
+    tools/index.rst
+    web/index.rst
+    relationsOfProduction/index.rst
+    ideas/index.rst
+    other/index.rst
 
 Indices and tables
 ==================
