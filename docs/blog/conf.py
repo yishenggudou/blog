@@ -48,8 +48,7 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
     'sphinx.ext.extlinks',
-    'alabaster',
-    'nbsphinx',
+
     "sphinxcontrib.plantuml",
     "sphinxcontrib.httpdomain",
     'matplotlib.sphinxext.only_directives',
@@ -59,7 +58,6 @@ extensions = [
     'numpydoc',
     'sphinx.ext.inheritance_diagram',
     'unicode_ids',
-    'ablog'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -117,7 +115,7 @@ todo_include_todos = True
 # a list of builtin themes.
 #
 # html_theme = 'alabaster'
-html_theme = 'sphinx_rtd_theme'
+#html_theme = 'sphinx_rtd_theme'
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
@@ -134,15 +132,7 @@ html_static_path = ['_static']
 #
 # This is required for the alabaster theme
 # refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars
-html_sidebars = {
-    '**': [
-        'about.html',
-        'navigation.html',
-        'relations.html',  # needs 'show_related': True theme option to display
-        'searchbox.html',
-        'donate.html',
-    ]
-}
+
 
 # -- Options for HTMLHelp output ------------------------------------------
 
@@ -259,117 +249,18 @@ def maybe_skip_member(app, what, name, obj, skip, options):
 # language = 'tr'
 # PROJECT
 
-version = release = ablog.__version__
-project = u'dafengStudio'
-copyright = u'2014-2018, dafengStudio Team'
-master_doc = 'index'
-
-# HTML OUTPUT
-
-html_title = "dafengStudio"
-html_use_index = True
-html_domain_indices = False
-html_show_sourcelink = True
-html_favicon = '_static/icon.ico'
-
-# ABLOG
-
-templates_path = [ablog.get_html_templates_path()]
-
-blog_title = 'dafengStudio'
-blog_baseurl = 'http://dafengstudio.com'
-blog_locations = {
-    'Pittsburgh': ('Pittsburgh, PA', 'http://en.wikipedia.org/wiki/Pittsburgh'),
-    'SF': ('San Francisco, CA', 'http://en.wikipedia.org/wiki/San_Francisco'),
-    'Denizli': ('Denizli, Turkey', 'http://en.wikipedia.org/wiki/Denizli'),
-}
-blog_languages = {
-    'zh': ('English', None),
-}
-blog_default_language = 'zh'
-blog_authors = {
-    'Ahmet': ('Ahmet Bakan', 'http://ahmetbakan.com'),
-    'Luc': ('Luc Saffre', 'http://saffre-rumma.net/luc/'),
-    'Mehmet': (u'Mehmet Gerçeker', 'https://github.com/mehmetg'),
-}
-blog_feed_archives = True
-blog_feed_fulltext = True
-blog_feed_length = None
-disqus_shortname = 'ablogforsphinx'
-disqus_pages = True
-fontawesome_css_file = 'css/font-awesome.css'
-
-# blog_feed_titles = False
-# blog_archive_titles = False
-# post_auto_excerpt = 1
-
-# THEME
-
-html_style = 'alabaster.css'
-html_theme = 'alabaster'
-html_sidebars = {
-    '**': ['about.html',
-           'postcard.html', 'recentposts.html',
-           'tagcloud.html', 'categories.html',
-           'archives.html',
-           'searchbox.html']
-}
-html_theme_path = [alabaster.get_path()]
-html_theme_options = {
-    'travis_button': True,
-    'github_user': 'sunpy',
-    'github_repo': 'ablog',
-    'description': 'ABlog for blogging with Sphinx',
-    'logo': 'ablog.png',
-}
-
-# SPHINX
-
-intersphinx_mapping = {
-    'python': ('http://docs.python.org/', None),
-    'sphinx': ('http://sphinx-doc.org/', None)
-}
-extlinks = {
-    'wiki': ('http://en.wikipedia.org/wiki/%s', ''),
-    'issue': ('https://github.com/sunpy/ablog/issues/%s', 'issue '),
-    'pull': ('https://github.com/sunpy/ablog/pull/%s', 'pull request '),
-}
-
-exclude_patterns = ['docs/manual/.ipynb_checkpoints/*']
-
-rst_epilog = '''
-.. _Sphinx: http://sphinx-doc.org/
-.. _Python: http://python.org
-.. _Disqus: http://disqus.com/
-.. _GitHub: https://github.com/sunpy/ablog
-.. _PyPI: https://pypi.python.org/pypi/ablog
-.. _Read The Docs: https://readthedocs.org/
-.. _Alabaster: https://github.com/bitprophet/alabaster
-'''
-
-import re
-from sphinx import addnodes
-
-event_sig_re = re.compile(r'([a-zA-Z-]+)\s*\((.*)\)')
 
 
-def parse_event(env, sig, signode):
-    m = event_sig_re.match(sig)
-    if not m:
-        signode += addnodes.desc_name(sig, sig)
-        return sig
-    name, args = m.groups()
-    signode += addnodes.desc_name(name, name)
-    plist = addnodes.desc_parameterlist()
-    for arg in args.split(','):
-        arg = arg.strip()
-        plist += addnodes.desc_parameter(arg, arg)
-    signode += plist
-    return name
+# theme
+
+from better import better_theme_path
+html_theme_path = [better_theme_path]
+html_theme = 'better'
+
+extensions = ['sphinx_sitemap']
 
 
 def setup(app):
-    app.connect('autodoc-skip-member', maybe_skip_member)
     app.add_config_value(
         'recommonmark_config', {
             # 'url_resolver': lambda url: github_doc_root + url,
@@ -379,14 +270,4 @@ def setup(app):
             'enable_inline_math': True,
             'enable_auto_doc_ref': True,
         }, True)
-    app.add_transform(AutoStructify)
-    from sphinx.ext.autodoc import cut_lines
-    from sphinx.util.docfields import GroupedField
-    app.connect('autodoc-process-docstring', cut_lines(4, what=['module']))
-    app.add_object_type('confval', 'confval',
-                        objname='configuration value',
-                        indextemplate='pair: %s; configuration value')
-    fdesc = GroupedField('parameter', label='Parameters',
-                         names=['param'], can_collapse=True)
-    app.add_object_type('event', 'event', 'pair: %s; event', parse_event,
-                        doc_field_types=[fdesc])
+

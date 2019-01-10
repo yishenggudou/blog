@@ -52,3 +52,4 @@ PyMySQL
 nbformat
 nbconvert!=5.4
 werkzeug
+better_theme_path
