@@ -75,7 +75,7 @@ master_doc = 'index'
 import datetime
 
 # General information about the project.
-project = u'dafengStudio'
+project = u'timger'
 copyright = u'{0}, timger'.format(datetime.datetime.now().year)
 author = u'timger'
 
@@ -134,7 +134,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'dafengStudio'
+htmlhelp_basename = 'timger'
 
 # -- Options for LaTeX output ---------------------------------------------
 

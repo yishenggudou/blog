@@ -1,0 +1,27 @@
+#
+# https://gitlab.com/gitlab-org/gitlab-runner/blob/master/.gitlab-ci.yml
+# https://docs.gitlab.com/ee/ci/yaml/
+# https://gitlab.com/ci/lint
+#
+before_script:
+- source /data/pythons/sphinx/bin/activate
+
+
+
+#after_script:
+#  - cp -vf docs/build/* /data/odc/
+
+
+stages:
+- build
+
+
+
+sit_build_job:
+  stage: build
+  script:
+  - ./app/odc-static-center/build_doc.sh >> /home/gitlab-runner/logs/sphinx.build.log
+  -
+  only:
+  - master
+
