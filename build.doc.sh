@@ -5,7 +5,7 @@ rm -vrf ./dist
 mkdir -p dist
 cp -vrf ./landing-page/* ./dist
 cd ./docs/blog/
-pip install -r requirements.txt
+pip install -r requirements.txt --user
 make clean html
 cd -
 mkdir -p ./dist/docs
