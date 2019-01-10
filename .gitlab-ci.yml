@@ -8,10 +8,6 @@ before_script:
 
 
 
-#after_script:
-#  - cp -vf docs/build/* /data/odc/
-
-
 stages:
 - build
 
@@ -21,7 +17,6 @@ sit_build_job:
   stage: build
   script:
   - ./build.doc.sh
-  only:
-  - master
+
 
 
