@@ -20,8 +20,7 @@ stages:
 sit_build_job:
   stage: build
   script:
-  - ./app/odc-static-center/build_doc.sh >> /home/gitlab-runner/logs/sphinx.build.log
-  -
+  - ./build.doc.sh
   only:
   - master
 
