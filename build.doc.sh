@@ -11,4 +11,4 @@ cd -
 mkdir -p ./dist/docs
 cp  -vrf ./docs/blog/_build/html ./dist/docs/blog
 mkdir -p /data/sites/timger/
-cp ./dist/* /data/sites/timger/
+cp -vrf ./dist/* /data/sites/timger/
