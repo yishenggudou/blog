@@ -14,11 +14,13 @@
     arithmetic/index.rst
     pattern/index.rst
     product/index.rst
+    framework/index.rst
     tools/index.rst
     web/index.rst
     relationsOfProduction/index.rst
     ideas/index.rst
     other/index.rst
+
 
 Indices and tables
 ==================

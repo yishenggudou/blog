@@ -53,3 +53,4 @@ nbformat
 nbconvert!=5.4
 werkzeug
 sphinxcontrib-disqus
+sphinx_sitemap
