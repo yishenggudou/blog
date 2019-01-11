@@ -37,12 +37,6 @@
         {{ docstitle }}
     </a></h1></header>
   {%- endif %}
-{%- endblock %}
-
-{%- block relbar1 -%}{{ relbar_top() }}{%- endblock -%}
-{%- block relbar2 -%}{{ relbar_bottom() }}{%- endblock -%}
-
-{%- block footer %}
 <script id="dsq-count-scr" src="//http-dafengstudio-com.disqus.com/count.js" async></script>
 <div id="disqus_thread"></div>
 <script>
@@ -64,6 +58,14 @@ s.setAttribute('data-timestamp', +new Date());
 })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+{%- endblock %}
+
+{%- block relbar1 -%}{{ relbar_top() }}{%- endblock -%}
+{%- block relbar2 -%}{{ relbar_bottom() }}{%- endblock -%}
+
+{%- block footer %}
 
   <footer id="pagefooter">
 
