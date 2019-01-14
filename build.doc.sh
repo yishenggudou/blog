@@ -7,6 +7,7 @@ cp -rf ./landing-page/* ./dist
 cd ./docs/blog/
 pip install -r requirements.txt
 make clean html
+rc=$?; if [[ ${rc} != 0 ]]; then exit 1 ${rc}; fi
 cd -
 mkdir -p ./dist/docs
 cp  -rf ./docs/blog/_build/html ./dist/docs/blog
