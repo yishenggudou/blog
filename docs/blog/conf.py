@@ -30,7 +30,6 @@ os.environ["PATH"] = "{0}:{1}".format(PROJECT_DIR, os.environ["PATH"])
 # -- General configuration ------------------------------------------------
 # If your documentation needs a minimal Sphinx version, state it here.
 #
-from exts import disqus
 
 # needs_sphinx = '1.0'
 # Add any Sphinx extension module names here, as strings. They can be
