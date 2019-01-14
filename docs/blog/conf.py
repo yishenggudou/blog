@@ -133,7 +133,7 @@ html_static_path = ['_static']
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'timger'
-
+html_favicon="7ffecc813fcf64fad5cec4e987d5435b.ico"
 # -- Options for LaTeX output ---------------------------------------------
 
 
