@@ -20,6 +20,7 @@
     web/index.rst
     relationsOfProduction/index.rst
     ideas/index.rst
+    booknotes/index.rst
     other/index.rst
 
 
