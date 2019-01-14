@@ -28,11 +28,11 @@ sys.path.insert(0, PROJECT_DIR)
 sys.path.insert(0, os.path.join(PROJECT_DIR, 'libs'))
 os.environ["PATH"] = "{0}:{1}".format(PROJECT_DIR, os.environ["PATH"])
 # -- General configuration ------------------------------------------------
-
 # If your documentation needs a minimal Sphinx version, state it here.
 #
-# needs_sphinx = '1.0'
+from exts import disqus
 
+# needs_sphinx = '1.0'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
@@ -45,7 +45,6 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
     'sphinx.ext.extlinks',
-
     "sphinxcontrib.plantuml",
     "sphinxcontrib.httpdomain",
     'matplotlib.sphinxext.only_directives',
@@ -112,7 +111,7 @@ todo_include_todos = True
 # a list of builtin themes.
 #
 # html_theme = 'alabaster'
-#html_theme = 'sphinx_rtd_theme'
+# html_theme = 'sphinx_rtd_theme'
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
@@ -223,12 +222,11 @@ plantuml_jar_path = os.path.join(PROJECT_DIR, "plantuml.jar")
 plantuml_output_format = "svg"
 plantuml_latex_output_format = "eps"
 
-
-#extensions += ['sphinxcontrib.SphinxRest', ]
-#rest_api_source_root = os.path.join(PROJECT_DIR, "_static", "apis")
-#rest_api_domain = "http://odc.alibaba.net"
-#rest_api_http_request_example_title = "Request Example"
-#rest_api_http_response_example_title = "Response Example"
+# extensions += ['sphinxcontrib.SphinxRest', ]
+# rest_api_source_root = os.path.join(PROJECT_DIR, "_static", "apis")
+# rest_api_domain = "http://odc.alibaba.net"
+# rest_api_http_request_example_title = "Request Example"
+# rest_api_http_response_example_title = "Response Example"
 
 extensions += ['plantweb.directive', ]
 
@@ -247,14 +245,15 @@ def maybe_skip_member(app, what, name, obj, skip, options):
 # PROJECT
 
 
-
 # theme
 
 from better import better_theme_path
+
 html_theme_path = [better_theme_path]
 html_theme = 'better'
 
 extensions += ['sphinx_sitemap']
+
 
 
 def setup(app):
@@ -267,4 +266,3 @@ def setup(app):
             'enable_inline_math': True,
             'enable_auto_doc_ref': True,
         }, True)
-
