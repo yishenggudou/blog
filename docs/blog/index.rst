@@ -21,6 +21,7 @@
     relationsOfProduction/index.rst
     ideas/index.rst
     booknotes/index.rst
+    commonsense/index.rst
     other/index.rst
 
 
