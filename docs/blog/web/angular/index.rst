@@ -1,4 +1,4 @@
-前端
+angular
 ==============================================================
 
 ..  toctree::
@@ -6,6 +6,5 @@
     :caption: Contents:
 
     intro.md
-    angular/index.rst
-    react/index.rst
+
 
