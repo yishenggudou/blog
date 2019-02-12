@@ -7,4 +7,5 @@ ideas
 
     intro.md
     short-videos.md
-
+    site.md
+    wechat.md
