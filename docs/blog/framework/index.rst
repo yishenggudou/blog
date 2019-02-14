@@ -8,9 +8,10 @@
     intro.md
     linux/index.rst
     spring/index.rst
+    pyqt/index.rst
     akka/index.rst
     jvm/index.rst
-    drf/indes.rst
+    drf/index.rst
     moviepy/index.rst
 
 
