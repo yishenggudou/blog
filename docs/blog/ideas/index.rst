@@ -9,3 +9,4 @@ ideas
     short-videos.md
     site.md
     wechat.md
+    app.md
