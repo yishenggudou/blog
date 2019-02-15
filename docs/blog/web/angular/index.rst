@@ -1,4 +1,4 @@
-ideas
+angular
 ==============================================================
 
 ..  toctree::
@@ -6,9 +6,5 @@ ideas
     :caption: Contents:
 
     intro.md
-    short-videos.md
-    site.md
-    wechat.md
-    android-app.md
-    mac-app.md
-    product/index.rst
+
+

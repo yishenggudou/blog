@@ -1,11 +1,9 @@
-前端
+react
 ==============================================================
 
 ..  toctree::
     :maxdepth: 2
     :caption: Contents:
 
-    intro.md
-    angular/index.rst
-    react/index.rst
+
 
