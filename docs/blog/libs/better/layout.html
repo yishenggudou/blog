@@ -2,6 +2,9 @@
 {%- from "relbar.html" import relbar_top with context %}
 {%- from "relbar.html" import relbar_bottom with context %}
 
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+
 {#- ### head ### -#}
 
 {%- block extrahead %}
@@ -40,7 +43,21 @@
 
 {%- endblock %}
 
+
+
 {%- block relbar1 -%}{{ relbar_top() }}{%- endblock -%}
+
+<script>
+var gitment = new Gitment({
+  owner: 'kiwenlau',
+  repo: 'blog',
+  oauth: {
+    client_id: '619731e02d908157a502',
+    client_secret: '79d021512d492496a0729177b9acd807c579b1b6',
+  },
+})
+gitment.render('gitment')
+</script>
 {%- block relbar2 -%}{{ relbar_bottom() }}{%- endblock -%}
 
 {%- block footer %}
