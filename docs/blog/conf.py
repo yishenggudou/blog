@@ -265,3 +265,5 @@ def setup(app):
             'enable_inline_math': True,
             'enable_auto_doc_ref': True,
         }, True)
+    app.add_stylesheet('_static/custom/default.css')
+    app.add_javascript('_static/custom/gitment.browser.js')
