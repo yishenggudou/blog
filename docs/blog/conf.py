@@ -133,7 +133,7 @@ html_static_path = ['_static']
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'timger'
-html_favicon="7ffecc813fcf64fad5cec4e987d5435b.ico"
+html_favicon = "7ffecc813fcf64fad5cec4e987d5435b.ico"
 # -- Options for LaTeX output ---------------------------------------------
 
 
@@ -254,7 +254,6 @@ html_theme = 'better'
 extensions += ['sphinx_sitemap']
 
 
-
 def setup(app):
     app.add_config_value(
         'recommonmark_config', {
@@ -265,5 +264,6 @@ def setup(app):
             'enable_inline_math': True,
             'enable_auto_doc_ref': True,
         }, True)
-    app.add_stylesheet('_static/custom/default.css')
-    app.add_javascript('_static/custom/gitment.browser.js')
+    app.add_stylesheet('https://timger-blog.oss-cn-beijing.aliyuncs.com/default.css')
+    app.add_javascript('https://timger-blog.oss-cn-beijing.aliyuncs.com/gitment.browser.js')
+    app.add_javascript('https://timger-blog.oss-cn-beijing.aliyuncs.com/fix.js')
