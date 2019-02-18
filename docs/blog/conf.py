@@ -265,5 +265,5 @@ def setup(app):
             'enable_auto_doc_ref': True,
         }, True)
     app.add_stylesheet('https://timger-blog.oss-cn-beijing.aliyuncs.com/default.css')
-    app.add_javascript('https://timger-blog.oss-cn-beijing.aliyuncs.com/gitment.browser.js')
+    app.add_javascript('https://timger-blog.oss-cn-beijing.aliyuncs.com/gitment.browser.js.1.js')
     app.add_javascript('https://timger-blog.oss-cn-beijing.aliyuncs.com/fix.js')

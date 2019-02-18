@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('.body').append('<div id="gitment"></div>')
+    $('.body').append('<div id="gitment"></div>');
     var gitment = new Gitment({
         owner: 'yishenggudou',
         repo: 'blog',
