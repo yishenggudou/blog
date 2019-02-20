@@ -22,6 +22,7 @@
     ideas/index.rst
     booknotes/index.rst
     commonsense/index.rst
+    annualsummary/index.rst
     other/index.rst
 
 

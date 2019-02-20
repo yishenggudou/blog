@@ -10,13 +10,16 @@ https://www.python-course.eu/turing_machine.php
 算盘就是状态转移标记,算盘和图灵机有很多的相似地方,我在很小的时候也背过算盘口诀,
 
 
-## py
+## Python仿真程序
 
 实现
 
 ```python
 
 class Tape(object):
+    """
+    纸带类
+    """
     
     blank_symbol = " "
     
@@ -47,6 +50,10 @@ class Tape(object):
 
         
 class TuringMachine(object):
+    
+    """
+    
+    """
     
     def __init__(self, 
                  tape = "", 
@@ -117,5 +124,14 @@ while not t.final():
 
 print("Result of the Turing machine calculation:")    
 print(t.get_tape())
+```
+
+#### 结果
+
+```
+Input on Tape:
+010011
+Result of the Turing machine calculation:
+101100
 ```
 
