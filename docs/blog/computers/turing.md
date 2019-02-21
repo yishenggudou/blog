@@ -135,3 +135,7 @@ Result of the Turing machine calculation:
 101100
 ```
 
+## 复杂演示
+
+https://turingmaschine.klickagent.ch/einband/#1_*_1
+
