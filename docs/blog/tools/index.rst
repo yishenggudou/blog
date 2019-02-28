@@ -7,5 +7,6 @@
 
     intro.md
     installbuilder.md
+    ansible.md
 
 
