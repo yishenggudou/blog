@@ -8,3 +8,9 @@ https://github.com/FolioReader/FolioReader-Android
 
 
 
+## 集群操作
+
+https://developer.android.com/studio/test/monkeyrunner/
+
+https://github.com/naonaorange/monkeyrunner
+
