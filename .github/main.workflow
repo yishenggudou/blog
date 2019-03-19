@@ -4,8 +4,9 @@ workflow "push event" {
 }
 
 action "Slack Notification" {
-  uses = "rtCamp/action-slack-notify@v1.0.0"
+  uses = "Ilshidur/action-slack@e820f544affdbb77c1dee6d3f752f7f2daf4a0b3"
   secrets = ["GITHUB_TOKEN"]
+  args = "A new commit has been pushed."
 }
 
 workflow "comment.workflow" {
