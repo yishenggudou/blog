@@ -12,3 +12,4 @@ ideas
     android-app.md
     mac-app.md
     product/index.rst
+    book.md
