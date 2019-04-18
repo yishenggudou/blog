@@ -11,6 +11,7 @@
     :caption: Contents:
 
     computers/index.rst
+    database/index.rst
     network/index.rst
     arithmetic/index.rst
     pattern/index.rst

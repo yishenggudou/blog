@@ -51,6 +51,7 @@ extensions = [
     'IPython.sphinxext.ipython_directive',
     'IPython.sphinxext.ipython_console_highlighting',
     'numpydoc',
+    'nbsphinx',
     'sphinx.ext.inheritance_diagram',
     'unicode_ids',
 ]

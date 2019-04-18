@@ -2,9 +2,15 @@
 
 ## 简介
 
-virtualenv 创建隔绝的Python环境的工具
+virtualenv 创建隔绝的Python环境的工具,是一个创建隔离无污染的python环境的工具.
+这个工具的重要完全是由于py的包版本管理没有maven这么完善导致的,python基于路径,查找依赖,一个路径下不可以多版本并存.每个包直接不一定强制想下兼容,这就导致我们在开发多个项目的时候。会出现不同项目对同一个包的依赖版本不一样，那么我们一般怎么解呢？当然是让依赖跟随项目，这个时候就需要一个这么个工具了。
 
-## 命令行
+下面详细介绍这个工具的一些用法和作用。
+
+
+## 用法
+
+简单的打印帮助文档如下。
 
 ```
 Usage: virtualenv [OPTIONS] DEST_DIR
@@ -50,6 +56,8 @@ Options:
                         This option has no effect.
 ```
 
+
+
 ## 生成依赖文件
 
 ```
@@ -67,9 +75,42 @@ pip download --dest packages --python-version 2   --only-binary=:all: -r require
 pip download --dest packages -r requirements.txt  --trusted-host mirrors.aliyun.com
 ```
 
+#### 平台的设置:
+
+https://www.python.org/dev/peps/pep-0425/
+
+## copyz整个环境
+
+```
+virtualenv --no-site-packages ./el7pynosite
+pip install -r requirements.txt
+tar -cvzf el7pynosite.tar.gz ./el7pynosite
+```
+
+然后 scp down下来 整个文件
+
+传到服务器上 
+
+如果目录一致不需要做任何变化
+如果目录不一致可以
+修改 
+`
+vim ./el7pynosite/bin/activate
+`
+
+最后改变
+
+```vim
+ 43 VIRTUAL_ENV="/root/el7pynosite"
+ 44 export VIRTUAL_ENV
+ ```
+ 
+ 就可以了
+ 
 
 ## 生成rpm包
 
+## virtualenv-clone
 
 
 
