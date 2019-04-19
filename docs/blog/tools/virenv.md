@@ -165,6 +165,11 @@ https://pypi.org/project/rpmvenv/0.11.0/
 
 https://github.com/spotify/dh-virtualenv
 
+#### window
+
+https://github.com/davidmarble/virtualenvwrapper-win
+
+
 ### virtualenv-clone
 
 https://pypi.org/project/virtualenv-clone/
