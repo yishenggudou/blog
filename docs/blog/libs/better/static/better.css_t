@@ -6,12 +6,11 @@
 /* main styles */
 
 body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Microsoft YaHei","微软雅黑","Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 100%;
     color: {{ theme_textcolor }};
     margin: 0;
     padding: 0;
-    line-height: 135%;
 }
 
 a {
@@ -40,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 1em;
     margin-bottom: 0.5em;
     color: {{ theme_headtextcolor }};
-    line-height: 135%;
+    line-height: 180%;
 }
 
 .body .section:first-child > :first-child,
@@ -50,12 +49,12 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 1rem;
 }
 
-h1 { font-size: 1.5rem; font-weight: bold; }
-h2 { font-size: 1.5rem; font-weight: normal; }
-h3 { font-size: 1.25rem; font-weight: bold; }
-h4 { font-size: 1.25rem; font-weight: normal; }
+h1 { font-size: 3rem; font-weight: bold; }
+h2 { font-size: 2.5rem; font-weight: bold; }
+h3 { font-size: 2rem; font-weight: bold; }
+h4 { font-size: 1.5rem; font-weight: bold; }
 h5 { font-size: 1rem; font-weight: bold; }
-h6 { font-size: 1rem; font-weight: normal; }
+h6 { font-size: 1rem; font-weight: bold; }
 
 /* page-level layout of containers */
 
