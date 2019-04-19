@@ -12,6 +12,25 @@ mavevn 依赖逻辑如下:
 
 ![](media/15556420578762.jpg)
 
+## 原理
+
+源码参见https://github.com/pypa/virtualenv
+
+整体的实现逻辑不复杂.
+
+![](media/15556459852160.jpg)
+
+从setuo.py看 主要在 一个`virtualenv.py`中
+
+![](media/15556460412846.jpg)
+
+再看 `virtualenv.py`
+
+
+https://github.com/pypa/virtualenv/blob/master/virtualenv.py
+
+里面主要做一些copy文件,生成目录的工作.
+
 
 ## 用法
 
@@ -63,6 +82,13 @@ Options:
 
 嗯，帮助文档简洁明了，但其实主要的作用无非就是一个生命周期。创建和修复.
 
+## 本地多环境管理
+
+本地多环境可以参考下,的使用
+
+https://github.com/pyenv/pyenv-virtualenv
+
+可以快速帮助你 生成和 销毁 虚拟环境
 
 
 
