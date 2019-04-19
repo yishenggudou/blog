@@ -52,12 +52,12 @@ h1, h2, h3, h4, h5, h6 {
     margin-left:8px
 }
 
-h1 { font-size: 3rem; font-weight: bold; }
-h2 { font-size: 2rem; font-weight: bold; margin-left:0px }
-h3 { font-size: 1.75rem; font-weight: bold;margin-left:0px }
-h4 { font-size: 1.5rem; font-weight: bold; margin-left:0px}
-h5 { font-size: 1rem; font-weight: bold; margin-left:0px}
-h6 { font-size: 1rem; font-weight: bold; }
+h1 { font-size: 3rem; font-weight: bold; margin-left:0px}
+h2 { font-size: 2rem; font-weight: bold; margin-left:1px }
+h3 { font-size: 1.75rem; font-weight: bold;margin-left:2px }
+h4 { font-size: 1.5rem; font-weight: bold; margin-left:3px}
+h5 { font-size: 1.25rem; font-weight: bold; margin-left:4px}
+h6 { font-size: 1rem; font-weight: bold; margin-left:5px}
 
 /* page-level layout of containers */
 
