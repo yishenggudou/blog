@@ -115,10 +115,15 @@ vim ./el7pynosite/bin/activate
  
  就可以了
  
+ 或者 
+ 
+` virtualenv --relocatable .`
 
 ### 生成rpm包
 
+https://pypi.org/project/rpmvenv/0.11.0/
+
 ### virtualenv-clone
 
-
+https://pypi.org/project/virtualenv-clone/
 
