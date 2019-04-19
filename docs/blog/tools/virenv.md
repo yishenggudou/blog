@@ -123,7 +123,9 @@ vim ./el7pynosite/bin/activate
  
  或者 
  
-` virtualenv --relocatable .`
+```
+virtualenv --relocatable .
+```
 
 ### 生成rpm包
 
