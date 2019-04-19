@@ -132,7 +132,7 @@ tar -cvzf el7pynosite.tar.gz ./el7pynosite
 传到服务器上 
 
 如果目录一致不需要做任何变化
-如果目录不一致可以
+
 修改 
 `
 vim ./el7pynosite/bin/activate
@@ -143,19 +143,27 @@ vim ./el7pynosite/bin/activate
 ```vim
  43 VIRTUAL_ENV="/root/el7pynosite"
  44 export VIRTUAL_ENV
- ```
+```
  
- 就可以了
+就可以了
  
- 或者 
+如果目录不一致,遇到问题可以
+
+执行下面命令修正路径
  
 ```
 virtualenv --relocatable .
 ```
 
-### 生成rpm包
+### 生成linux包
+
+#### rpm
 
 https://pypi.org/project/rpmvenv/0.11.0/
+
+#### Debian
+
+https://github.com/spotify/dh-virtualenv
 
 ### virtualenv-clone
 
