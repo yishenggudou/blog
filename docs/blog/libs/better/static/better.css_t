@@ -71,7 +71,6 @@ header#pageheader, footer#pagefooter, .related, .document {
 }
 .body .section img{
     margin:4px auto 4px auto;
-    -webkit-box-reflect:below 10px;
 }
 #pageheader h1{
     text-align:center
