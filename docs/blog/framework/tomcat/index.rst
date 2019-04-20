@@ -1,4 +1,4 @@
-spring
+tomcat
 ==============================================================
 
 ..  toctree::
@@ -6,5 +6,5 @@ spring
     :caption: Contents:
 
     intro.md
-    beans.md
+    servlet.md
 

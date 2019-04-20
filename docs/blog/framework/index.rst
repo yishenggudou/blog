@@ -6,6 +6,7 @@
     :caption: Contents:
 
     intro.md
+    tomcat/index.rst
     linux/index.rst
     spring/index.rst
     pyqt/index.rst
