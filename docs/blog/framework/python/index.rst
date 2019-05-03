@@ -6,5 +6,6 @@ python
     :caption: Contents:
 
     intro.md
+    package.md
 
 
