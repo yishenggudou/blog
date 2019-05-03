@@ -1,4 +1,4 @@
-框架学习
+框架&语言
 ==============================================================
 
 ..  toctree::
@@ -6,13 +6,14 @@
     :caption: Contents:
 
     intro.md
-    tomcat/index.rst
     linux/index.rst
+    python/index.rst
     spring/index.rst
     pyqt/index.rst
     akka/index.rst
     jvm/index.rst
     drf/index.rst
     moviepy/index.rst
+    tomcat/index.rst
 
 

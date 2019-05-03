@@ -19,4 +19,10 @@ python
 每周末集中一天生产内容,周一到周五定点发送.
 
 
+## 参考
+
+https://github.com/abhiTronix/vidgear
+
+
+
 
