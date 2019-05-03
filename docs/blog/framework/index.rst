@@ -13,6 +13,7 @@
     akka/index.rst
     jvm/index.rst
     drf/index.rst
+    maven/index.rst
     moviepy/index.rst
     tomcat/index.rst
 
