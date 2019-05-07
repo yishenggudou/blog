@@ -16,5 +16,5 @@
     maven/index.rst
     moviepy/index.rst
     tomcat/index.rst
-
+    uml/index.rst
 
