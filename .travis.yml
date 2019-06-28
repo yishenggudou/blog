@@ -1,5 +1,5 @@
 language: python
-cache: bundler
+cache: pip
 python:
   - "3.6"
 
