@@ -6,7 +6,7 @@ install:
   - pip install -r docs/blog/requirements.txt
 
 script:
-  - sh ./build.doc.sh
+  - bash ./build.doc.sh
 
 after_script:
   - cd ./dist
