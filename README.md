@@ -1,6 +1,6 @@
 # follow
 
-![](https://www.travis-ci.org/yishenggudou/blog/settings#)
+![](https://www.travis-ci.org/yishenggudou/blog.svg?branch=master)
 
 ## weibo
 
