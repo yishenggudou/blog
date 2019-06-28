@@ -253,6 +253,7 @@ html_theme_path = [better_theme_path]
 html_theme = 'better'
 
 extensions += ['sphinx_sitemap']
+html_baseurl = 'http://timger.com.cn/docs/blog/'
 
 
 def setup(app):
