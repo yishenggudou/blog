@@ -1,5 +1,7 @@
 # follow
 
+![](https://www.travis-ci.org/yishenggudou/blog/settings#)
+
 ## weibo
 
 [weibo](https://weibo.com/zhanghaibo)

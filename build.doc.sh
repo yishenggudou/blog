@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 cd $(dirname $0)
 DIR=`pwd`
+pip install -r requirements.txt
 rm -vrf ./dist
 mkdir -p dist
 cp -rf ./landing-page/* ./dist
