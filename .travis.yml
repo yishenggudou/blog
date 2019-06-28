@@ -1,4 +1,5 @@
 language: python
+cache: bundler
 python:
   - "3.6"
 
