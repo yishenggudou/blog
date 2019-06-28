@@ -1,0 +1,30 @@
+language: python
+python:
+  - "3.6"
+
+install:
+  - pip install -r docs/blog/requirements.txt
+
+script:
+  - ./build.doc.sh
+
+after_script:
+  - cd ./dist
+  - git init
+  - git config user.name "timger"
+  - git config user.email "yishenggudou@gmail.com"
+  - git add .
+  - git commit -m "Update Blog By TravisCI With Build $TRAVIS_BUILD_NUMBER"
+  # Coding Pages
+  - git push --force --quiet "https://qinyuanpei:${CO_TOKEN}@${CO_REF}" master:master
+  - git tag v0.0.$TRAVIS_BUILD_NUMBER -a -m "Auto Taged By TravisCI With Build $TRAVIS_BUILD_NUMBER"
+  # Coding Pages
+  - git push --quiet "https://qinyuanpei:${CO_TOKEN}@${CO_REF}" master:master --tags
+
+
+env:
+ global:
+   # Github Pages
+   - GH_REF: github.com/qinyuanpei/qinyuanpei.github.io
+   # Coding Pages
+   - CO_REF: git.dev.tencent.com/yishenggudou/blog.git
