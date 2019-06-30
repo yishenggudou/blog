@@ -9,3 +9,4 @@
     installbuilder.md
     ansible.md
     virenv.md
+    python-env.md
