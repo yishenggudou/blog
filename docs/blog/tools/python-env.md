@@ -13,9 +13,14 @@ index-url = http://mirrors.aliyun.com/pypi/simple/
 trusted-host=mirrors.aliyun.com
 ```
 
-## py 工程
+## py 工程模板
 
-常见我们要新建一个 py 工程建议使用 https://github.com/audreyr/cookiecutter
+常见我们要新建一个 py 工程,在java领域可以根据maven或者ide做到.
+由于py的包结构很不标准,需要手动改的很多,所以建议一般的项目可以使用`cookiecutter`
+
+参考 :[cookiecutter](https://github.com/audreyr/cookiecutter)
+
+cookiecutter 本身提供了很多场景下的模板. 根据cookiecutter模板创建出来的工程比较标准
 
 可以参见 标签为 [python](https://github.com/audreyr/cookiecutter#python) 部分的模板
 
