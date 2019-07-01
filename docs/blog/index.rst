@@ -22,7 +22,6 @@
     relationsOfProduction/index.rst
     ideas/index.rst
     booknotes/index.rst
-    travel-notes/index.rst
     commonsense/index.rst
     annualsummary/index.rst
     other/index.rst
