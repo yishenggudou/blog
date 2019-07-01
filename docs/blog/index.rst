@@ -26,6 +26,7 @@
     commonsense/index.rst
     annualsummary/index.rst
     other/index.rst
+    notes/index.rst
 
 
 Indices and tables
