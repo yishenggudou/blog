@@ -1,4 +1,4 @@
-ideas
+挣一千万
 ==============================================================
 
 ..  toctree::
@@ -6,5 +6,9 @@ ideas
     :caption: Contents:
 
     intro.md
-    earn-one-million/index.rst
-    product/index.rst
+    short-videos.md
+    site.md
+    wechat.md
+    android-app.md
+    mac-app.md
+    book.md
