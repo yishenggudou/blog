@@ -6,6 +6,7 @@
     :caption: Contents:
 
     intro.md
+    types.md
     同构和异构.md
 
 
