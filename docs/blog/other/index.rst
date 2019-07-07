@@ -6,5 +6,6 @@
     :caption: Contents:
 
     intro.md
+    learnforbeginer.md
 
 
