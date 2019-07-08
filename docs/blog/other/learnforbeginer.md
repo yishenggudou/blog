@@ -13,6 +13,8 @@ pyqt
 
 https://www.cnblogs.com/archisama/
 https://www.kancloud.cn/digest/py-qt/119453
+https://www.learnpyqt.com/
+
 
 
 ## 内功部分
