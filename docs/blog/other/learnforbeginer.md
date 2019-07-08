@@ -9,6 +9,12 @@ web部分 建议spring boot 体系
 
 本部分侧重练习,以产出demo产品为主
 
+pyqt 
+
+https://www.cnblogs.com/archisama/
+https://www.kancloud.cn/digest/py-qt/119453
+
+
 ## 内功部分
 
 内功部分为了,获得问题的本质
