@@ -11,9 +11,10 @@ web部分 建议spring boot 体系
 
 pyqt 
 
-https://www.cnblogs.com/archisama/
-https://www.kancloud.cn/digest/py-qt/119453
-https://www.learnpyqt.com/
+1. https://www.cnblogs.com/archisama/
+2. https://www.kancloud.cn/digest/py-qt/119453
+3. https://www.learnpyqt.com/
+4. https://101.camp/
 
 numbpy
 
@@ -28,13 +29,10 @@ numbpy
 
 本部分偏重理论,以翻译或者源码学习为宜
 
-https://www.ibm.com/developerworks/cn/java/wa-spring1/
-
-https://github.com/wuyouzhuguli/SpringAll
-
-https://github.com/hollischuang/toBeTopJavaer
-
-https://github.com/Snailclimb/JavaGuide
+1. https://www.ibm.com/developerworks/cn/java/wa-spring1/
+2. https://github.com/wuyouzhuguli/SpringAll
+3. https://github.com/hollischuang/toBeTopJavaer
+4. https://github.com/Snailclimb/JavaGuide
 
 
 
