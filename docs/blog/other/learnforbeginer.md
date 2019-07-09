@@ -23,6 +23,7 @@ pyqt
 2. https://www.kancloud.cn/digest/py-qt/119453
 3. https://www.learnpyqt.com/
 4. https://101.camp/
+5. https://github.com/pyqt/examples
 
 numbpy
 
