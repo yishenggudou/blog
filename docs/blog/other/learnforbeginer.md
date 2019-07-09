@@ -1,5 +1,13 @@
 # 初学者入门
 
+## 工具部分
+
+1. https://www.jetbrains.com/idea/
+2. https://www.liaoxuefeng.com/wiki/896043488029600
+3. https://github.com/
+4. https://desktop.github.com/
+
+
 ## 招式部分
 
 招式部分为了能够快速体验成就感,
