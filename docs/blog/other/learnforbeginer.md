@@ -24,6 +24,7 @@ pyqt
 3. https://www.learnpyqt.com/
 4. https://101.camp/
 5. https://github.com/pyqt/examples
+6. https://build-system.fman.io/docs/
 
 numbpy
 
