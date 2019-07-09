@@ -15,6 +15,7 @@ https://www.cnblogs.com/archisama/
 https://www.kancloud.cn/digest/py-qt/119453
 https://www.learnpyqt.com/
 
+numbpy
 
 
 ## 内功部分
@@ -26,6 +27,14 @@ https://www.learnpyqt.com/
 3. 算法
 
 本部分偏重理论,以翻译或者源码学习为宜
+
+https://www.ibm.com/developerworks/cn/java/wa-spring1/
+
+https://github.com/wuyouzhuguli/SpringAll
+
+https://github.com/hollischuang/toBeTopJavaer
+
+https://github.com/Snailclimb/JavaGuide
 
 
 
