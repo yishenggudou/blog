@@ -25,6 +25,7 @@ pyqt
 4. https://101.camp/
 5. https://github.com/pyqt/examples
 6. https://build-system.fman.io/docs/
+7. https://github.com/jaredtao/taoquick
 
 numbpy
 
