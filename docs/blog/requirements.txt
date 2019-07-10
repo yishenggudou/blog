@@ -54,3 +54,4 @@ nbconvert!=5.4
 werkzeug
 sphinx_sitemap
 nbsphinx
+tinkerer
