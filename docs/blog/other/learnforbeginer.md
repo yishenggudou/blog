@@ -26,6 +26,7 @@ pyqt
 5. https://github.com/pyqt/examples
 6. https://build-system.fman.io/docs/
 7. https://github.com/jaredtao/taoquick
+8. https://www.zhihu.com/question/25649197
 
 numbpy
 
