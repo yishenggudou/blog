@@ -48,3 +48,7 @@ numbpy
 
 
 
+## AI
+
+1. https://github.com/ddbourgin/numpy-ml
+
