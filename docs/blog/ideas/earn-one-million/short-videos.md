@@ -23,6 +23,22 @@ python
 
 https://github.com/abhiTronix/vidgear
 
+https://github.com/mzlogin/awesome-adb
+
+https://github.com/google/python-adb
+
+https://github.com/celery/django-celery
+
+https://github.com/Genymobile/scrcpy
+
+https://github.com/openstf/stf
+
+https://github.com/tunaemre/Remote-Controller-Android
+
+https://github.com/topics/remote-control
+
+https://github.com/firstone/RESTRemote
+
 
 
 
