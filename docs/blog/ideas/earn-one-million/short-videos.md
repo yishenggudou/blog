@@ -21,7 +21,20 @@ python
 
 ## 参考
 
+
+### 视频
+
 https://github.com/abhiTronix/vidgear
+
+https://github.com/Zulko/moviepy
+
+https://github.com/jdf/processing.py
+
+https://github.com/videoflow/videoflow
+
+
+
+### android控制
 
 https://github.com/mzlogin/awesome-adb
 
@@ -43,5 +56,22 @@ https://github.com/firstone/RESTRemote
 https://developer.android.com/studio/test/monkeyrunner
 
 
+https://github.com/dtmilano/AndroidViewClient
 
+
+https://www.softwaretestinghelp.com/5-best-automation-tools-for-testing-android-applications/
+
+### 语音合成
+
+https://help.aliyun.com/knowledge_detail/120699.html?spm=a2c4g.11186631.2.4.670456631HIBHy
+
+https://nls-portal.console.aliyun.com/serviceBuy?spm=5176.6660585.7745261643.1.79b46bf8ICMk9M
+
+https://github.com/tensorflow/lingvo
+
+https://github.com/leon-ai/leon
+
+https://github.com/topics/speech-synthesis
+
+https://github.com/keithito/tacotron
 
