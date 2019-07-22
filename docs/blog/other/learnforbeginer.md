@@ -46,6 +46,7 @@ numbpy
 3. https://github.com/hollischuang/toBeTopJavaer
 4. https://github.com/Snailclimb/JavaGuide
 5. https://github.com/TheAlgorithms
+6. https://github.com/vinta/awesome-python#gui-development
 
 
 
