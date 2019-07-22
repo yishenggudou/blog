@@ -40,5 +40,8 @@ https://github.com/topics/remote-control
 https://github.com/firstone/RESTRemote
 
 
+https://developer.android.com/studio/test/monkeyrunner
+
+
 
 
