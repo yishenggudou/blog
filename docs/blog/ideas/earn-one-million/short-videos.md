@@ -75,3 +75,12 @@ https://github.com/topics/speech-synthesis
 
 https://github.com/keithito/tacotron
 
+## youtube
+
+https://github.com/tokland/youtube-upload
+
+https://github.com/ytdl-org/youtube-dl
+
+https://github.com/topics/youtube
+
+
