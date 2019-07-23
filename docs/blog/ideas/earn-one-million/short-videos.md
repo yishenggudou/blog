@@ -32,6 +32,9 @@ https://github.com/jdf/processing.py
 
 https://github.com/videoflow/videoflow
 
+#### gif
+
+https://imageio.readthedocs.io/en/latest/examples.html
 
 
 ### android控制
