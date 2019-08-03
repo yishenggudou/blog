@@ -33,6 +33,9 @@ https://github.com/jdf/processing.py
 
 https://github.com/videoflow/videoflow
 
+#### gif
+
+https://imageio.readthedocs.io/en/latest/examples.html
 
 
 ### android控制
@@ -75,4 +78,32 @@ https://github.com/leon-ai/leon
 https://github.com/topics/speech-synthesis
 
 https://github.com/keithito/tacotron
+
+## youtube
+
+https://github.com/tokland/youtube-upload
+
+https://github.com/ytdl-org/youtube-dl
+
+https://github.com/topics/youtube
+
+## 任务
+
+https://github.com/DIYgod/RSSHub
+
+
+## 编辑
+
+https://github.com/learn-anything/react-mindmap#readme
+
+https://github.com/fex-team/kityminder-editor
+
+https://github.com/drichard/mindmaps
+
+https://github.com/Mongkii/RMind
+
+
+### AndroidViewClient
+
+
 
