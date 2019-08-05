@@ -7,5 +7,6 @@
 
     intro.md
     201907/index.rst
+    201908/index.rst
 
 
