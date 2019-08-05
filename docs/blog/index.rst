@@ -26,6 +26,7 @@
     annualsummary/index.rst
     other/index.rst
     notes/index.rst
+    about.md
 
 
 Indices and tables
