@@ -1,5 +1,8 @@
 # aubot this blog
 
+![](https://travis-ci.org/yishenggudou/blog.svg?branch=master)
+
+
 
 https://github.com/yishenggudou/blog
 
