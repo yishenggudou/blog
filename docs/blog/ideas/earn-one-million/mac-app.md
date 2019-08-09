@@ -19,3 +19,9 @@ https://github.com/mherrmann/fbs/
 pyqt
 python
 
+## 资料
+
+### wind
+
+https://github.com/pywinauto/pywinauto
+
