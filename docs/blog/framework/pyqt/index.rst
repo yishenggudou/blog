@@ -6,5 +6,6 @@ pyqt
     :caption: Contents:
 
     intro.md
+    qml.md
 
 
