@@ -25,3 +25,7 @@ python
 
 https://github.com/pywinauto/pywinauto
 
+https://github.com/topics/pyqt5
+
+https://github.com/mherrmann/fbs-tutorial
+
