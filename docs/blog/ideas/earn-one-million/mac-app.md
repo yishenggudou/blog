@@ -29,3 +29,5 @@ https://github.com/topics/pyqt5
 
 https://github.com/mherrmann/fbs-tutorial
 
+https://github.com/cztomczak/cefpython/blob/master/examples/qt.py
+
