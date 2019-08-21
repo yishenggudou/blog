@@ -6,5 +6,5 @@ sqlalchemy
     :caption: Contents:
 
     intro.md
-
-
+    types.md
+    dialect.md
