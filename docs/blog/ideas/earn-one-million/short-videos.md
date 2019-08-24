@@ -79,6 +79,8 @@ https://github.com/topics/speech-synthesis
 
 https://github.com/keithito/tacotron
 
+https://github.com/CorentinJ/Real-Time-Voice-Cloning
+
 ## youtube
 
 https://github.com/tokland/youtube-upload
