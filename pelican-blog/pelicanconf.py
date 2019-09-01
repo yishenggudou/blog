@@ -37,3 +37,12 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
 THEME = 'pelican-blueidea'
+
+MARKUP = ('md', 'ipynb')
+
+PLUGIN_PATHS = ['./plugins']
+PLUGINS = ['ipynb.markup']
+
+# if you create jupyter files in the content dir, snapshots are saved with the same
+# metadata. These need to be ignored.
+IGNORE_FILES = [".ipynb_checkpoints"]
