@@ -28,5 +28,6 @@ https://splinter.readthedocs.io/en/latest/why.html
 
 https://pypi.org/project/pyppeteer/
 
+https://github.com/Sigil-Ebook/Sigil/releases
 
 
