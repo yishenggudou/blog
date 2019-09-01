@@ -10,3 +10,4 @@
     ansible.md
     virenv.md
     python-env.md
+    umi.md
