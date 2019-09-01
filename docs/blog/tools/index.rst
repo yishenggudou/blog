@@ -11,3 +11,5 @@
     virenv.md
     python-env.md
     umi.md
+    halo.md
+    pelican.md
