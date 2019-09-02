@@ -4,11 +4,13 @@ DIR=`pwd`
 rm -vrf ./dist
 mkdir -p dist
 cp -rf ./landing-page/* ./dist
-cd  pelican-blog
+cd ./pelican-blog
 make html
-cp -
+cd -
+pwd
 mkdir -p ./dist/docs/blog
-cp -vrf ./pelican-blog/output/* ./dist/docs/blog/
+pwd
+cp -vrf ./pelican-blog/output/ ./dist/docs/blog/
 #make clean html
 #rc=$?; if [[ ${rc} != 0 ]]; then exit 1 ${rc}; fi
 #cd -
