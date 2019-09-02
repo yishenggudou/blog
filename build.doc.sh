@@ -8,7 +8,7 @@ cd  pelican-blog
 make html
 cp -
 mkdir -p ./dist/docs/blog
-cp -vrf ./docs/blog/output/* ./dist/docs/blog/
+cp -vrf ./pelican-blog/output/* ./dist/docs/blog/
 #make clean html
 #rc=$?; if [[ ${rc} != 0 ]]; then exit 1 ${rc}; fi
 #cd -
