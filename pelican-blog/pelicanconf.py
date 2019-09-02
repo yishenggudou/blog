@@ -48,7 +48,7 @@ LINKS = (
     # ('Pelican', 'http://getpelican.com/'),
     # ('Python.org', 'http://python.org/'),
     # ('Jinja2', 'http://jinja.pocoo.org/'),
-    ('about this blog', 'pages/about-this-blog.html'),
+    ('about this blog', '/docs/blog/category/pages/about-this-blog.html'),
 
 )
 
