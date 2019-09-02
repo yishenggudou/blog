@@ -5,6 +5,7 @@ python:
 
 install:
   - pip install -r docs/blog/requirements.txt
+  - pip install -r  pelican-blog/requirements.txt
 
 script:
   - bash ./build.doc.sh

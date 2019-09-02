@@ -15,8 +15,12 @@ PATH = 'content'
 PAGE_PATHS = ['pages']
 ARTICLE_PATHS = ['blog']
 PAGE_EXCLUDES = []
-OUTPUT_SOURCES = True
+OUTPUT_SOURCES = False
 OUTPUT_SOURCES_EXTENSION = '.text'
+ARTICLE_URL = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/'
+ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/index.html'
+PAGE_URL = 'pages/{slug}'
+PAGE_SAVE_AS = 'pages/{slug}/index.html'
 
 DEFAULT_CATEGORY = u'默认'
 
@@ -43,6 +47,7 @@ LINKS = (
     # ('Pelican', 'http://getpelican.com/'),
     # ('Python.org', 'http://python.org/'),
     # ('Jinja2', 'http://jinja.pocoo.org/'),
+    ('about this blog', 'pages/about-this-blog.html'),
 
 )
 
@@ -60,7 +65,12 @@ THEME = 'pelican-blueidea'
 MARKUP = ('md', 'ipynb')
 
 PLUGIN_PATHS = ['./plugins']
-PLUGINS = ['ipynb.markup']
+PLUGINS = ['ipynb.markup', 'assets', 'sitemap', 'gravatar', 'tag_cloud']
+
+SITEMAP = {
+    'exclude': ['tag/', 'category/'],
+    'format': 'xml'
+}
 
 # if you create jupyter files in the content dir, snapshots are saved with the same
 # metadata. These need to be ignored.
@@ -80,3 +90,6 @@ MARKDOWN = {
     },
     'output_format': 'html5',
 }
+
+#
+PYGMENTS_RST_OPTIONS = {'classprefix': 'pgcss', 'linenos': 'table'}
