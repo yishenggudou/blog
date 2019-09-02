@@ -3,8 +3,9 @@
 from __future__ import unicode_literals
 
 """
-http://docs.getpelican.com/en/3.6.3/settings.html
-https://docs.getpelican.com/en/3.1.1/settings.html
+http://docs.getpelican.com/en/4.1.1/settings.html
+https://docs.getpelican.com/en/4.1.1/settings.html
+https://raw.githubusercontent.com/getpelican/pelican/master/samples/pelican.conf.py
 """
 AUTHOR = u'timger'
 SITENAME = u'\u6765\u4e16\u505a\u674e\u767d'
