@@ -38,9 +38,13 @@ PAGE_EXCLUDES = []
 OUTPUT_SOURCES = False
 OUTPUT_SOURCES_EXTENSION = '.text'
 ARTICLE_URL = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
+# ARTICLE_URL 为模板中的路径
 ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
+# ARTICLE_SAVE_AS 为保存文件的路径, 需要和上面一致
 PAGE_URL = 'pages/{slug}'
+# 页面的访问路径
 PAGE_SAVE_AS = 'pages/{slug}/index.html'
+# 页面实际生产的路径
 
 DEFAULT_CATEGORY = u'默认'
 
@@ -71,6 +75,7 @@ LINKS = (
     ('about this blog', '/docs/blog/category/pages/about-this-blog.html'),
 
 )
+# 会在底部出现
 
 # Social widget
 SOCIAL = (
@@ -81,6 +86,8 @@ SOCIAL = (
     ('segmentfault', 'https://segmentfault.com/u/timger'),
     ('zhihu', 'https://www.zhihu.com/people/timger')
 )
+
+# 社交账号
 
 DEFAULT_PAGINATION = 10
 
