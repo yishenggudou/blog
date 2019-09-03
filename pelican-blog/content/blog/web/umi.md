@@ -7,7 +7,8 @@ Summary: umi usage
 # 背景
 
 最近有需要写些前端业务,需要写一些前端.
-看了最新的 angular 和 react 觉得 angular 全家桶虽然很成熟,但是在组件方面还是 react 更多
+看了最新的 angular 和 react 觉得 angular 全家桶虽然很成熟,但是在组件方面还是 react 更多.
+angular 变化太大, 学了也没啥用, 主要国内感觉没场景, 已经被 react 带偏了.
 
 
 # 用法
