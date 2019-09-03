@@ -4,16 +4,14 @@ Category: tool
 Tags: python, pelican, tool
 Summary: use pelican writer you blog
 
+# 背景
 
 ## 简介
 
-See below intra-site link examples in Markdown format.
+pass
 
+# 用法
 
-```python
-def main(test):
-    print test
-```
 ## 配置
 
 ```python

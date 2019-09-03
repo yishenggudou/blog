@@ -92,6 +92,11 @@ a:hover, a:active {
     text-decoration: underline;
 }
 
+.entry-content p img {
+    width: 100%;
+    height: auto;
+}
+
 /* Paragraphs */
 div.line-block,
 p {
