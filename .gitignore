@@ -105,3 +105,4 @@ venv.bak/
 .idea
 /docs/blog/_build/
 /blog/pelican-blog/output
+/pelican-blog/output
