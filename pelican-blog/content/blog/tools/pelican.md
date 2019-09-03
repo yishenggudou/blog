@@ -27,14 +27,15 @@ pelican当前用的版本是 4.4.1
 主要基于jinja模板做了变量渲染相关,以及rst 和 markdown 的解析.
 
 
-Pelican is a static site generator, written in Python.
+#### Pelican is a static site generator, written in Python.
 
 1. Write content in reStructuredText or Markdown using your editor of choice
 2. Includes a simple command line tool to (re)generate site files
 3. Easy to interface with version control systems and web hooks
 4. Completely static output is simple to host anywhere
 
-Features
+#### Features
+
 Pelican currently supports:
 
 1. Chronological content (e.g., articles, blog posts) as well as static pages
