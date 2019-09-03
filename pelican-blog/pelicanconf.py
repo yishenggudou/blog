@@ -121,4 +121,4 @@ PYGMENTS_RST_OPTIONS = {
 
 # static
 SITEURL = "/docs/blog/"
-STATIC_PATHS = ['static', 'slides', 'pdfs', 'images']
+STATIC_PATHS = ['static', 'docs', 'slides', 'pdfs', 'images']

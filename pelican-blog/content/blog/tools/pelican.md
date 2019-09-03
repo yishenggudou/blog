@@ -141,7 +141,8 @@ PYGMENTS_RST_OPTIONS = {
 
 ## 截图
 
-![](/static/15675128310219.jpg)
+
+![](/docs/blog/static/15675235665790.jpg)
 
 
 
