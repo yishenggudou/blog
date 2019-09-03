@@ -67,12 +67,12 @@ DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
-THEME = 'pelican-blueidea'
+THEME = 'theme'
 
 MARKUP = ('md', 'ipynb')
 
 PLUGIN_PATHS = ['./plugins']
-PLUGINS = ['ipynb.markup', 'assets', 'sitemap', 'gravatar', 'tag_cloud']
+PLUGINS = ['pelican-ipynb.markup', 'assets', 'sitemap', 'gravatar', 'tag_cloud']
 
 SITEMAP = {
     'exclude': ['tag/', 'category/'],
@@ -88,10 +88,18 @@ JINJA_ENVIRONMENT = {'trim_blocks': True, 'lstrip_blocks': True}
 # JINJA_FILTERS = {'urlencode': urlencode_filter}
 
 # markdown
-
+# https://python-markdown.github.io/reference/#markdown
+# http://jwarby.github.io/jekyll-pygments-themes/languages/javascript.html
 MARKDOWN = {
     'extension_configs': {
-        'markdown.extensions.codehilite': {'css_class': 'highlight'},
+        'markdown.extensions.codehilite': {
+            'noclasses': False,
+            'css_class': 'highlight ',
+            'pygments_style': {
+
+            },
+            'use_pygments': True,
+            'linenums': True},
         'markdown.extensions.extra': {},
         'markdown.extensions.meta': {},
     },
@@ -101,5 +109,5 @@ MARKDOWN = {
 #
 PYGMENTS_RST_OPTIONS = {
     'classprefix': 'pgcss',
-    'linenos': 'table'
+    'linenos': 'inline'
 }
