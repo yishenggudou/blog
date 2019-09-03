@@ -11,8 +11,7 @@ pwd
 mkdir -p ./dist/docs/blog
 pwd
 cp -vrf ./pelican-blog/output/* ./dist/docs/blog/
-mkdir -p ./dist/static
-cp -vrf ./pelican-blog/output/static/* ./dist/static/
+cp -vrf ./pelican-blog/output/docs/* ./dist/docs/
 #make clean html
 #rc=$?; if [[ ${rc} != 0 ]]; then exit 1 ${rc}; fi
 #cd -
