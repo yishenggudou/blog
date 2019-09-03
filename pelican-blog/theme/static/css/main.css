@@ -92,11 +92,10 @@ a:hover, a:active {
     text-decoration: underline;
 }
 
-.entry-content p img {
-    width: 100%;
+.entry-content p img{
+     width: 100%;
     height: auto;
 }
-
 /* Paragraphs */
 div.line-block,
 p {
@@ -220,7 +219,7 @@ aside, nav, article, figure {
 .body {
     clear: both;
     margin: 0 auto;
-    width: 80%;
+    width: 800px;
 }
 
 img.right, figure.right {
@@ -454,7 +453,7 @@ img.left, figure.left {
     /*margin-bottom: 2em;*/
     overflow: hidden;
     padding: 20px 20px;
-    width: 80%;
+    width: 760px;
 
     border-radius: 10px 10px 0 0;
     -moz-border-radius: 10px 10px 0 0;
