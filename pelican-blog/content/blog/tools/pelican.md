@@ -10,18 +10,69 @@ Summary: use pelican writer you blog
 博客搬家又搬家,跟我毅力有关.我承认自己是一个没有毅力的人.也跟文笔不行有关,
 我总喜欢简单说明.不喜欢长篇大论. 最近因为公司团队的气氛,我学习了一些关于细节的思考.
 我觉得有必要把对于细节的思考记录下来,又开始弄了下博客,
+
 我承认我是一个爱瞎折腾的人,也没折腾出啥名堂.希望这次能够坚持.
+
 前段时间迷上了`sphinx` 基于 sphinx 做了个静态博客,但是主题和功能还是不如pelican来的丰富
-还是切到pelican上,顺便仔细看了下pelican的文档
+还是切到pelican上,顺便仔细看了下pelican的文档我觉得还是改到pelican来比较好,
+当然之前的研究还是有用的, 基于 github 的评论部分还是可以延续下去
 
 ## 简介
 
 pelican当前用的版本是 4.4.1 
 你如果看 [pelican](https://github.com/getpelican/pelican) 的仓库,严格来说,代码不算多.
 
+![](/docs/blog/static/15675262963787.jpg)
+
+主要基于jinja模板做了变量渲染相关,以及rst 和 markdown 的解析.
+
+
+Pelican is a static site generator, written in Python.
+
+1. Write content in reStructuredText or Markdown using your editor of choice
+2. Includes a simple command line tool to (re)generate site files
+3. Easy to interface with version control systems and web hooks
+4. Completely static output is simple to host anywhere
+
+Features
+Pelican currently supports:
+
+1. Chronological content (e.g., articles, blog posts) as well as static pages
+2. Integration with external services (e.g., Google Analytics and Disqus)
+3. Site themes (created using Jinja2 templates)
+4. Publication of articles in multiple languages
+5. Generation of Atom and RSS feeds
+6. Syntax highlighting via Pygments
+7. Importing existing content from WordPress, Dotclear, and other services
+8. Fast rebuild times due to content caching and selective output writing
+9. Check out Pelican's documentation for further information.
+
 # 用法
 
+用法整体文档 在 [4.4.1](http://docs.getpelican.com/en/4.1.1/quickstart.html)
+
+## 生成
+
+```bash
+pip install pelican markdown
+mkdir -p ~/projects/yoursite
+cd ~/projects/yoursite
+pelican-quickstart
+```
+
+然后就可以改配置文件了
+
 ## 配置
+
+配置主要包含:
+
+1. 文件路径的规则
+2. 各种文件的目录
+3. 站点地图
+4. 主题
+5. 插件
+
+具体可以参加官方文档,我就不细列了,下面是我的配置文件
 
 ```python
 #!/usr/bin/env python
