@@ -53,9 +53,12 @@ LINKS = (
 )
 
 # Social widget
-SOCIAL = (('sina', 'https://weibo.com/zhanghaibo'),
-          ('twitter', 'https://twitter.com/yishenggudou'),
-          ('youtube', 'https://www.youtube.com/channel/UC-JrBqbEaj6fxZ7uIVs8GjA?view_as=subscriber'))
+SOCIAL = (
+    ('sina', 'https://weibo.com/zhanghaibo'),
+    ('twitter', 'https://twitter.com/yishenggudou'),
+    ('youtube', 'https://www.youtube.com/channel/UC-JrBqbEaj6fxZ7uIVs8GjA?view_as=subscriber'),
+    ('facebook', 'https://www.facebook.com/yishenggudou')
+)
 
 DEFAULT_PAGINATION = 10
 
