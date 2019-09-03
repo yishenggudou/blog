@@ -6,9 +6,17 @@ Summary: use pelican writer you blog
 
 # 背景
 
+很早前了解pelican。一直也没有认真写啊一博客,
+博客搬家又搬家,跟我毅力有关.我承认自己是一个没有毅力的人.也跟文笔不行有关,
+我总喜欢简单说明.不喜欢长篇大论. 最近因为公司团队的气氛,我学习了一些关于细节的思考.
+我觉得有必要把对于细节的思考记录下来,又开始弄了下博客
+前段时间迷上了`sphinx` 基于 sphinx 做了个静态博客,但是主题和功能还是不如pelican来的丰富
+还是切到pelican上,顺便仔细看了下pelican的文档
+
 ## 简介
 
-pass
+pelican当前用的版本是 4.4.1 
+你如果看 [pelican](https://github.com/getpelican/pelican) 的仓库,严格来说,代码不算多.
 
 # 用法
 
