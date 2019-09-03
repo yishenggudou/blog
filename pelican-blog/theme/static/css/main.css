@@ -220,7 +220,7 @@ aside, nav, article, figure {
 .body {
     clear: both;
     margin: 0 auto;
-    width: 800px;
+    width: 80%;
 }
 
 img.right, figure.right {
@@ -454,7 +454,7 @@ img.left, figure.left {
     /*margin-bottom: 2em;*/
     overflow: hidden;
     padding: 20px 20px;
-    width: 760px;
+    width: 80%;
 
     border-radius: 10px 10px 0 0;
     -moz-border-radius: 10px 10px 0 0;
