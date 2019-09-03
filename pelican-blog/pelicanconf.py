@@ -18,8 +18,8 @@ ARTICLE_PATHS = ['blog']
 PAGE_EXCLUDES = []
 OUTPUT_SOURCES = False
 OUTPUT_SOURCES_EXTENSION = '.text'
-ARTICLE_URL = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/'
-ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/index.html'
+ARTICLE_URL = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
+ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
 PAGE_URL = 'pages/{slug}'
 PAGE_SAVE_AS = 'pages/{slug}/index.html'
 
