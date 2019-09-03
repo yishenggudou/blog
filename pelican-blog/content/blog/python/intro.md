@@ -8,6 +8,7 @@ Summary: Short version for index and feeds
 
 See below intra-site link examples in Markdown format.
 
-```bash
-exco
+```python
+def main(test):
+    print test
 ```

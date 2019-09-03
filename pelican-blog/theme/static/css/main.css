@@ -12,7 +12,6 @@
 @import url("reset.css");
 @import url("pygment.css");
 @import url("typogrify.css");
-@import url("styles.css");
 /***** Global *****/
 /* Body */
 body {
@@ -60,7 +59,7 @@ h6 {
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
-    line-height: 1.1;
+    line-height: 2;
     margin-bottom: .8em;
     font-family: 'Microsoft YaHei', 'Yanone Kaffeesatz', arial, serif;
 }
@@ -588,7 +587,7 @@ img.left, figure.left {
 .hentry {
     display: block;
     clear: both;
-    border-bottom: 1px solid #eee;
+    border-bottom: 0px solid #eee;
     padding: 1.5em 0;
 }
 
@@ -649,7 +648,7 @@ li:last-child .hentry, #content > .hentry {
 }
 
 #posts-list footer {
-    border-top: 1px solid;
+    border-top: 1px dashed #333333;
     margin-top: -1.3em;
 }
 

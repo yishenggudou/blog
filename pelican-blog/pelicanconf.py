@@ -109,5 +109,5 @@ MARKDOWN = {
 #
 PYGMENTS_RST_OPTIONS = {
     'classprefix': 'pgcss',
-    'linenos': 'inline'
+    'linenos': 'table'
 }
