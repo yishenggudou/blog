@@ -4,8 +4,7 @@ python:
   - "3.6"
 
 install:
-  - pip install -r docs/blog/requirements.txt
-  - pip install -r  pelican-blog/requirements.txt
+  - pip install -r requirements.txt
 
 script:
   - bash ./build.doc.sh
