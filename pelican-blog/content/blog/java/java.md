@@ -8,6 +8,7 @@ Summary: Short version for index and feeds
 
 See below intra-site link examples in Markdown format.
 
-```bash
+```java
 exco
 ```
+
