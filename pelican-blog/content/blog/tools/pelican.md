@@ -26,6 +26,7 @@ pelican当前用的版本是 4.4.1
 
 主要基于jinja模板做了变量渲染相关,以及rst 和 markdown 的解析.
 
+官方的介绍如下
 
 #### Pelican is a static site generator, written in Python.
 
