@@ -9,7 +9,7 @@ https://raw.githubusercontent.com/getpelican/pelican/master/samples/pelican.conf
 """
 AUTHOR = u'timger'
 SITENAME = u'\u6765\u4e16\u505a\u674e\u767d'
-SITEURL = ''
+SITEURL = '/docs/blog/'
 FEED_DOMAIN = SITEURL
 
 PATH = 'content'
@@ -118,3 +118,7 @@ PYGMENTS_RST_OPTIONS = {
     'classprefix': 'pgcss',
     'linenos': 'table'
 }
+
+# static
+SITEURL = "/docs/blog/"
+STATIC_PATHS = ['static', 'slides', 'pdfs', 'images']

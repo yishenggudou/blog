@@ -141,6 +141,9 @@ PYGMENTS_RST_OPTIONS = {
 
 ## 截图
 
+![](/static/15675128310219.jpg)
+
+
 
 
 https://docs.getpelican.com/en/4.1.1/content.html#internal-pygments-options
