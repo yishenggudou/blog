@@ -36,6 +36,7 @@ TIMEZONE = 'Asia/Shanghai'
 DEFAULT_LANG = u'zh'
 
 # Feed generation is usually not desired when developing
+FEED_DOMAIN = "/docs/blog/"
 FEED_ALL_ATOM = ('feeds/all.atom.xml')
 CATEGORY_FEED_ATOM = ('feeds/{slug}.atom.xml')
 TRANSLATION_FEED_ATOM = None
@@ -96,4 +97,7 @@ MARKDOWN = {
 }
 
 #
-PYGMENTS_RST_OPTIONS = {'classprefix': 'pgcss', 'linenos': 'table'}
+PYGMENTS_RST_OPTIONS = {
+    'classprefix': 'pgcss',
+    'linenos': 'table'
+}
