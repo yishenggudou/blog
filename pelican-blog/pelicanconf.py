@@ -125,3 +125,8 @@ PYGMENTS_RST_OPTIONS = {
 # static
 SITEURL = "http://timger.com.cn/docs/blog/"
 STATIC_PATHS = ['static', 'docs', 'slides', 'pdfs', 'images']
+
+#
+DEFAULT_METADATA = {
+        'status': 'draft',
+}

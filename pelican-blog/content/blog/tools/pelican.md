@@ -3,6 +3,7 @@ Date: 2019-09-03 20:00
 Category: tool
 Tags: python, pelican, tool
 Summary: use pelican writer you blog
+Status: published
 
 # 背景
 
