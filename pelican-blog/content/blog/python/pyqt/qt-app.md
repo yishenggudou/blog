@@ -4,11 +4,13 @@ Category: qt
 Tags: python, pyqt
 Summary: 使用qt构建轻量级的mac app 和 window app
 
+# 背景
 
+# 方案
 
-See below intra-site link examples in Markdown format.
+# 实施
 
-```bash
-exco
-```
+## 准备
+
+## 方案1
 
