@@ -10,8 +10,8 @@ Summary: 使用qt构建轻量级的mac app 和 window app
 
 ## 方案1 基于 fbs
 
-https://github.com/mherrmann/fbs-tutorial
-https://github.com/mherrmann/fbs/
+1. [fbs-tutorial](https://github.com/mherrmann/fbs-tutorial)
+2. [fbs](https://github.com/mherrmann/fbs/)
 
 #### 问题
 
@@ -22,6 +22,7 @@ https://github.com/mherrmann/fbs/
 
 http://www.pyinstaller.org/
 
+#### 问题
 
 # 实施
 
