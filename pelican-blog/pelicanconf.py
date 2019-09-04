@@ -54,6 +54,9 @@ LINKS = (
     # ('Python.org', 'http://python.org/'),
     # ('Jinja2', 'http://jinja.pocoo.org/'),
     ('about this blog', '/docs/blog/category/pages/about-this-blog.html'),
+    ('linux-v011-learn', 'https://linux-v011-learn.readthedocs.io/zh_CN/latest/'),
+    ('pyvm', 'https://pyvm.readthedocs.io/zh_CN/latest/'),
+    ('scala-design-patterns', 'https://scala-design-patterns.readthedocs.io/zh_CN/latest/'),
 
 )
 # 会在底部出现
