@@ -15,7 +15,8 @@ https://github.com/mherrmann/fbs/
 
 #### 问题
 
-1. 版权
+1. 版权GPL协议 不能直接商用
+2. 
 
 ## 方案2 pyinstaller
 
