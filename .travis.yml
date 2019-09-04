@@ -24,3 +24,6 @@ after_script:
 env:
   global:
     - CO_REF: git.dev.tencent.com/yishenggudou/blog.git
+
+notifications:
+  slack: timger:G7kZu0yeXJGnYg7D8YvxJ7Oi

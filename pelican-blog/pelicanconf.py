@@ -123,5 +123,5 @@ PYGMENTS_RST_OPTIONS = {
 }
 
 # static
-SITEURL = "/docs/blog/"
+SITEURL = "http://timger.com.cn/docs/blog/"
 STATIC_PATHS = ['static', 'docs', 'slides', 'pdfs', 'images']
