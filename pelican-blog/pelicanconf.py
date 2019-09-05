@@ -101,8 +101,9 @@ IGNORE_FILES = [".ipynb_checkpoints"]
 JINJA_ENVIRONMENT = {'trim_blocks': True, 'lstrip_blocks': True}
 # JINJA_FILTERS = {'urlencode': urlencode_filter}
 import hashlib
+
 JINJA_FILTERS = {
-    'md5': lambda x: hashlib.md5(x).hexdigest()
+    'md5': lambda x: hashlib.md5(str(x)).hexdigest()
 }
 # markdown
 # https://python-markdown.github.io/reference/#markdown
