@@ -156,6 +156,8 @@ page目录如下:
 const post = this.props.match.params.post;
 ```
 
+具体用法可以参见 [react-router](https://reacttraining.com/react-router/core/api/Route)
+
 ## 数据交互
 
 数据交互。没找到好的库。
