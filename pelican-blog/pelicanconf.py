@@ -86,7 +86,7 @@ THEME = 'theme'
 MARKUP = ('md', 'ipynb')
 
 PLUGIN_PATHS = ['./plugins']
-PLUGINS = ['pelican-ipynb.markup', 'assets', 'sitemap', 'gravatar', 'tag_cloud']
+PLUGINS = ['pelican-ipynb.markup', 'assets', 'sitemap', 'gravatar', 'tag_cloud', 'render_math']
 
 SITEMAP = {
     'exclude': ['tag/', 'category/'],

@@ -238,3 +238,13 @@ Status: published
 1. google analysis
 2. ta.qq.com
 
+## 编辑器
+
+推荐 mweb
+
+## 数学公式
+
+https://github.com/getpelican/pelican-plugins/tree/master/render_math
+
+http://nosferalatu.com/Pelican.html
+

@@ -12,7 +12,17 @@ Status: published
 需要了解一个语言的生态得先从包管理工具入手.本着以后希望沉淀一个自己的组件包,告别copy and Modify 模式.
 简单了解了下npm, 记录如下
 
-# 发布
+# 发布逻辑
+
+## 创建工程
+
+以 react 组件包举例子. 
+```
+npx create-react-app my-app --typescript
+
+cd my-app
+
+```
 
 ## 新增账号
 
