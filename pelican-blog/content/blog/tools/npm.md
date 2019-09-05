@@ -54,7 +54,9 @@ npm pack
 
 将会形成一个tar.gz的包, 可以被npm直接install 
 
-## 确认package
+## 确认package是否为共有
+
+需要改private为false 否则是不能被发布的.
 
 ![](/docs/blog/static/15676561408950.jpg)
 
@@ -112,6 +114,7 @@ npm notice
 
 # 总结
 
-npm在易用性上做的非常不错,我们只需要几个命令就可以完成发布和创建,重点是每个命令的语义非常清晰,一下子就能理解看明白, 对比java的maven和 python的 pypi 实在好用太多
+npm在易用性上做的非常不错,我们只需要几个命令就可以完成发布和创建,重点是每个命令的语义非常清晰,一下子就能理解看明白,
+且配置文件只有一个package.json,一目了然, 对比java的maven和 python的 pypi 实在好用太多
 npm上包的数量这么多跟npm好用有离不开的关系
 
