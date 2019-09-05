@@ -208,5 +208,33 @@ PYGMENTS_RST_OPTIONS = {
 
 
 
-https://docs.getpelican.com/en/4.1.1/content.html#internal-pygments-options
+[internal-pygments-options](https://docs.getpelican.com/en/4.1.1/content.html#internal-pygments-options)
+
+# 用点
+
+## 文章草稿能力
+
+在配置文件中加上
+
+```python
+DEFAULT_METADATA = {
+        'status': 'draft',
+}
+```
+
+然后写文章时候 在每个文章的头部信息中需要加上
+
+```
+Status: published
+```
+
+## 三方评论
+
+1. [DISQUS](http://www.disqus.com)
+2. [gitment](https://github.com/imsun/gitment)
+
+## 三方统计
+
+1. google analysis
+2. ta.qq.com
 
