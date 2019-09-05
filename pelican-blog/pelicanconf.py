@@ -57,7 +57,10 @@ LINKS = (
     ('linux-v011-learn', 'https://linux-v011-learn.readthedocs.io/zh_CN/latest/'),
     ('pyvm', 'https://pyvm.readthedocs.io/zh_CN/latest/'),
     ('scala-design-patterns', 'https://scala-design-patterns.readthedocs.io/zh_CN/latest/'),
-    ('cython-algorithms', 'https://cython-algorithms.readthedocs.io/zh_CN/latest/')
+    ('cython-algorithms', 'https://cython-algorithms.readthedocs.io/zh_CN/latest/'),
+    ('npms', 'https://www.npmjs.com/settings/yishenggudou/packages'),
+    ('pypi', 'https://pypi.org/user/haibo.zhang/'),
+    ('maven', 'https://mvnrepository.com/artifact/com.github.yishenggudou')
 )
 # 会在底部出现
 
@@ -128,5 +131,5 @@ STATIC_PATHS = ['static', 'docs', 'slides', 'pdfs', 'images']
 
 #
 DEFAULT_METADATA = {
-        'status': 'draft',
+    'status': 'draft',
 }
