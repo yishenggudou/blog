@@ -23,7 +23,7 @@
             <script type="text/javascript">
                 $(document).ready(function () {
                     var gitment = new Gitment({
-                        id: "{{ article.url }}",
+                        id: "{{ article.url |hash('md5')}}",
                         owner: 'yishenggudou',
                         repo: 'blog',
                         oauth: {
