@@ -104,3 +104,8 @@ npm notice
 最终可以在 [npm官网](https://www.npmjs.com/package/schema-antd) 上看到你的包, 包名需要替换为自己内容
 
 
+# 总结
+
+npm在易用性上做的非常不错,我们只需要几个命令就可以完成发布和创建,重点是每个命令的语义非常清晰,一下子就能理解看明白, 对比java的maven和 python的 pypi 实在好用太多
+npm上包的数量这么多跟npm好用有离不开的关系
+
