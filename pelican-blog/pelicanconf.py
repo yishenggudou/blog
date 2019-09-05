@@ -60,7 +60,8 @@ LINKS = (
     ('cython-algorithms', 'https://cython-algorithms.readthedocs.io/zh_CN/latest/'),
     ('npms', 'https://www.npmjs.com/settings/yishenggudou/packages'),
     ('pypi', 'https://pypi.org/user/haibo.zhang/'),
-    ('maven', 'https://mvnrepository.com/artifact/com.github.yishenggudou')
+    ('maven', 'https://mvnrepository.com/artifact/com.github.yishenggudou'),
+    ('travis-ci', 'https://travis-ci.org/yishenggudou')
 )
 # 会在底部出现
 
