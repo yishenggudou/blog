@@ -103,7 +103,7 @@ JINJA_ENVIRONMENT = {'trim_blocks': True, 'lstrip_blocks': True}
 import hashlib
 
 JINJA_FILTERS = {
-    'md5': lambda x: hashlib.md5(str(x)).hexdigest()
+    'md5': lambda x: hashlib.md5(x.encode('utf-8')).hexdigest()
 }
 # markdown
 # https://python-markdown.github.io/reference/#markdown

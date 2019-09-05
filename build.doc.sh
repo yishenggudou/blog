@@ -13,7 +13,7 @@ pwd
 cp -vrf ./pelican-blog/output/* ./dist/docs/blog/
 cp -vrf ./pelican-blog/output/docs/* ./dist/docs/
 pwd
-ehco 'finish ...'
+echo 'finish ...'
 #make clean html
 #rc=$?; if [[ ${rc} != 0 ]]; then exit 1 ${rc}; fi
 #cd -
