@@ -8,9 +8,15 @@ Status: published
 
 # 背景
 
+写web甚久,但是crud而已,没有特别的高层次产物和沉淀,
+需要了解一个语言的生态得先从包管理工具入手.本着以后希望沉淀一个自己的组件包,告别copy and Modify 模式.
+简单了解了下npm, 记录如下
+
 # 发布
 
 ## 新增账号
+
+如果已经有账号可以不需要
 
 ```bash
 ➜  schema-antd git:(master) ✗ npm adduser 
