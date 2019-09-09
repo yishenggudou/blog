@@ -13,18 +13,43 @@ Summary: 使用qt构建轻量级的mac app 和 window app
 1. [fbs-tutorial](https://github.com/mherrmann/fbs-tutorial)
 2. [fbs](https://github.com/mherrmann/fbs/)
 
+fbs is the fastest way to create a Python GUI. It solves common pain points such as packaging and deployment. Based on Python and Qt, fbs is a lightweight alternative to Electron.
+
+fbs的说法是Electron的替代品,Electron没深入了解过, 从教程看如果都用python3+pyqt确实很简单
+
 #### 问题
 
 1. 版权GPL协议 不能直接商用
-2. 
+2. 需要开源
+3. 不支持python2.x, 恰好我的一个项目是依赖python2
 
 ## 方案2 pyinstaller
 
-http://www.pyinstaller.org/
+[pyinstaller](http://www.pyinstaller.org/)
+
+pyinstaller 最早的开发 我貌似还在maillist里面看到宣传邮件
+官方的介绍如下:
+
+PyInstaller freezes (packages) Python applications into stand-alone executables, under Windows, GNU/Linux, Mac OS X, FreeBSD, Solaris and AIX.
+
+pyinstaller实际上简单的代码是ok,如果复杂的工程,难点在于依赖, 比如django, 我就怎么也没搞定过.
 
 #### 问题
 
-# 实施
+1. 需要定制的东西很多
+2. python依赖问题不好弄,切各个平台打包细节复杂
+
+
+# 我的观点
+
+我个人觉得virtualenv的适应性貌似更好,我觉得生命力最强的模式是
+
+1. 制造一个qt的安装器(初始化器)
+2. 第一次进入app的时候,下载最新virtual的包(或者自带virtual文件)
+3. 升级时候下载对应的virtual包
+4. 拿到包之后修正文件路径, 
+5. 使用supervisor拉起进程.
+
 
 ## 准备
 
