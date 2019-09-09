@@ -16,6 +16,9 @@ Status: published
 
 fbs is the fastest way to create a Python GUI. It solves common pain points such as packaging and deployment. Based on Python and Qt, fbs is a lightweight alternative to Electron.
 
+![](/docs/blog/static/15680020667660.jpg)
+
+
 fbs的说法是Electron的替代品,Electron没深入了解过, 从教程看如果都用python3+pyqt确实很简单
 
 #### 问题
@@ -32,6 +35,9 @@ pyinstaller 最早的开发 我貌似还在maillist里面看到宣传邮件
 官方的介绍如下:
 
 PyInstaller freezes (packages) Python applications into stand-alone executables, under Windows, GNU/Linux, Mac OS X, FreeBSD, Solaris and AIX.
+
+![](/docs/blog/static/15680020398783.jpg)
+
 
 pyinstaller实际上简单的代码是ok,如果复杂的工程,难点在于依赖, 比如django, 我就怎么也没搞定过.
 
