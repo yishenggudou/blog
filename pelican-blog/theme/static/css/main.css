@@ -70,6 +70,10 @@ body {
     margin-left: 20px;
 }
 
+.entry-content blockquote {
+    font-style: italic;
+}
+
 
 /* Headings */
 h1 {
