@@ -65,3 +65,7 @@ pyinstaller实际上简单的代码是ok,如果复杂的工程,难点在于依�
 
 > 其实我也思考过不用django直接js算了,不过鉴于对js的了解说不定js的坑更多,由于多年的python圈子,我还是对python放心点. flask也不错,但是写crud还是没有django全套快.
 
+针对上面的想法 我起了一个工程[qtcontainer](https://github.com/yishenggudou/qtcontainer) 专门做一个壳子
+匹配到我的三个千万方向的其中之一.
+
+
