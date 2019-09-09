@@ -72,6 +72,7 @@ body {
 
 .entry-content blockquote {
     font-style: italic;
+    border-left: 2px dashed #2196f3;
 }
 
 
