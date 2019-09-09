@@ -45,11 +45,17 @@ pyinstaller实际上简单的代码是ok,如果复杂的工程,难点在于依�
 
 我个人觉得virtualenv的适应性貌似更好,我觉得生命力最强的模式是
 
+## 纯python3的想
+
+直接使用PyQt和FBS,不做其他处理
+
+## 集成python2.x或者其他组件,以及django+webui类产品
+
 1. 制造一个qt的安装器(初始化器)
 2. 第一次进入app的时候,下载最新virtual的包(或者自带virtual文件)
 3. 升级时候下载对应的virtual包
 4. 拿到包之后修正文件路径, 
-5. 使用supervisor拉起进程.
+5. 使用supervisor 封装服务,拉起其他服务进程.
 
 
 ## 准备
