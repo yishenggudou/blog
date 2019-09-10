@@ -1,7 +1,7 @@
-Title: github-action and workflow
+Title: github action and workflow
 Date: 2019-09-03 23:02
 Category: tool
-Tags: test, web, python
+Tags: github-action,workflow
 Summary: umi usage
 
 # 背景
