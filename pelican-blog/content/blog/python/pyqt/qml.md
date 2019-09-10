@@ -5,14 +5,47 @@ Tags: python, pyqt, qml
 Summary: qml 简介
 Status: _published
 
+# 简介
+
+# 核心概念
+
+## datamodel
+
+## ui组件
+
+### 工具栏
+
+### window系列
 
 
-See below intra-site link examples in Markdown format.
 
-```bash
-exco
+## 事件
+
+### ui事件
+
+### 数据事件
+
+
+# 调试工具
+
+## qmlscene
+
+```
+brew install qt5
 ```
 
+然后
+
+```
+brew linkapps qt5
+brew link --force qt5
+```
+
+然后
+```
+which qmake
+which qmlscene
+```
     
 ## OwaViewer
 
