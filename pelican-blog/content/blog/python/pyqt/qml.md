@@ -56,5 +56,9 @@ which qmlscene
 
 1. [qmlbook-in-chinese](https://cwc1987.gitbooks.io/qmlbook-in-chinese/content/)
 2. [PyQt](https://github.com/PyQt5/PyQt/tree/master/QPushButton)
-3. []()
+3. [QML-Example](https://github.com/cfsghost/QML-Example)
+4. [clean-editor](https://github.com/Fagrell/clean-editor)
+5. [awesome-qt-qml](https://github.com/mikalv/awesome-qt-qml)
+6. [awesome-python-qt](https://github.com/JulienGrv/awesome-python-qt)
+7. [awesome-qt](https://github.com/skhaz/awesome-qt)
 
