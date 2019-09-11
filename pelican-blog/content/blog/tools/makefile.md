@@ -11,8 +11,61 @@ make是一个工具程序（Utility software），经由读取叫做“makefile�
 
 许多现代软件的开发中（如Microsoft Visual Studio），集成开发环境已经取代make，但是在Unix环境中，仍然有许多任务程师采用make来协助软件开发。
 
+
 # 概念
 
+简单理解是makefile 是一组特定的DSL,方便快速完成各种基于文件和环境变化的任务定义和构建.
+
+### 目标
+
+目标就是一个任务
+
+### 依赖
+
+一定是一个依赖规则.或者文件.或者宏
+
+```
+OBJECTS = main.o text.o
+INSTALL_PATH = /usr/local
+editor: $(OBJECTS)
+	gcc -o editor $(OBJECTS)
+main.o: main.c
+	gcc -c main.c
+text.o: text.c
+	gcc -c text.c
+install:editor
+	mv editor $(INSTALL_PATH)
+```
+
+
+
+## 场景
+
+### 整合各种零散脚本
+
+比如:
+
+```
+build_pri.sh
+build_product.sh
+build_test.sh
+build_docker.sh
+```
+
+### 串联各种步骤
+
+```python
+def do_one():
+    pass
+    
+def do_two():
+    pass
+    
+def main():
+    do_one()
+    do_two()
+
+```
 
 # 举例
 
