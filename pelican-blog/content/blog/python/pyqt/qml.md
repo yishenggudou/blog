@@ -41,11 +41,24 @@ brew linkapps qt5
 brew link --force qt5
 ```
 
+或者
+
+```
+ls  /usr/local/Cellar/qt/5.13.1/bin/qmlscene 
+```
+或者加入上面路径到PATH
+
+```
+export PATH=$PATH:/usr/local/Cellar/qt/5.13.1/bin/
+```
+
 然后
 ```
 which qmake
 which qmlscene
 ```
+
+查看是否生效
     
 ## OwaViewer
 
