@@ -13,13 +13,18 @@ QML是一种描述性的脚本语言，文件格式以.qml结尾。语法格式�
 
 qml简单说就是一种UI描述DSL,常见UI类DSL其实是 XML居多, 但是UI描述只能描述静态的UI,我们需要的UI,一般还需要数据,事件, 所以除了QML,还需 model和script,Delegate
 
+![](/docs/blog/static/15683709235573.jpg)
+
+
 ## model
 
 qml大致上还是遵循`MVC`设计的.
 
 ![](/docs/blog/static/15683005401746.jpg)
 
-modal等价于数据源, 可以被
+modal等价于数据源, 可以被view组件使用,也可以适配后端
+
+[qtqml-models](https://doc.qt.io/qt-5/qtqml-models-qmlmodule.html0
 
 ## ui组件
 
@@ -37,6 +42,8 @@ qml组件文档如下[qmlmodule](https://doc.qt.io/qt-5/qtquick-controls2-qmlmod
 #### 工具栏
 
 工具栏是`MenuBar`, 工具栏一般在`ApplicationWindow` 下级, 为全局菜单.
+
+MenuBar 在不同的地方可能表现行为不一样
 
 https://doc.qt.io/qt-5/qml-qtquick-controls2-menubar.html
 
@@ -88,13 +95,58 @@ window简单说 应该是一个窗口, 属于比较重的一个对象. 一般一
 
 
 
-### 嵌套
+### 嵌套(组件化)
 
+或者叫组件化,我们需要把一些细节内容,变成组件,或者说需要复用和单元化, 这个就需要组件化
 
+#### 示例
 
-### 工具栏
+目录结构
 
-### window系列
+```
+projectdir/
+  qml/
+    projectname/
+      main.qml
+      components/component_example.qml
+```
+
+in `mycomponent.qml`
+
+```
+MyCustomText {
+  text:"Hello, Scooby Doo!";
+}
+```
+
+in `main.qml`
+
+```
+Rectangle {
+  ...
+  Loader {
+    source:"components/component_example.qml";
+  }
+  ...
+}
+```
+
+或者:
+
+```
+
+import "components"
+
+Rectangle {
+  id: root
+  MyCustomText {
+    text: "This is my custom text element"
+  }
+}
+```
+
+[include-another-qml-file-from-a-qml-file](https://stackoverflow.com/questions/22168457/include-another-qml-file-from-a-qml-file)
+
 
 
 
