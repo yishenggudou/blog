@@ -23,6 +23,7 @@ master 分支一般对应的是生产环境的代码，是稳定的发布版本�
 功能分支（feature branch）
 补丁分支（hotfix branch）
 预发分支（release branch）
+
 一旦完成开发，它们就会被合并进 develop 或 master，然后被删除。
 
 Git Flow常用的分支
