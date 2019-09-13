@@ -24,8 +24,18 @@ qml大致上还是遵循`MVC`设计的.
 
 modal等价于数据源, 可以被view组件使用,也可以适配后端
 
+但是数据源有很多种:
+
+1. database
+2. object
+3. http file
+4. json file
+
 1. [qtqml-models](https://doc.qt.io/qt-5/qtqml-models-qmlmodule.html)
 2. [wishlist](https://github.com/LupusAnay/wishlist)
+3. [qt-io](https://doc.qt.io/qt-5/io.html)
+4. [localstorage](https://doc.qt.io/qt-5/qtquick-localstorage-qmlmodule.html)
+5. [sqlalchemy-example](https://github.com/LupusAnay/wishlist)
 
 ## ui组件
 
