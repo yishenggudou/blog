@@ -11,6 +11,19 @@ git flow 核心点是解决一个开发共识问题, 赋予特定分支特定意
 
 核心解决还是 多版本研发管理和多人协作.
 
+项目中存在两个长期分支
+
+主分支（master）
+开发分支 （develop）
+
+master 分支一般对应的是生产环境的代码，是稳定的发布版本；develop 分支对应的是开发环境的代码，存放的都是最新的开发版。
+
+三种短期分支
+
+功能分支（feature branch）
+补丁分支（hotfix branch）
+预发分支（release branch）
+一旦完成开发，它们就会被合并进 develop 或 master，然后被删除。
 
 Git Flow常用的分支
 
