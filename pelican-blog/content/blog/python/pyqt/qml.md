@@ -31,7 +31,10 @@ modal等价于数据源, 可以被view组件使用,也可以适配后端
 3. http file
 4. json file
 
-常规的用法如下:
+
+### 用法验收
+
+#### 常规的用法如下:
 
 ```
 ListView {
@@ -46,7 +49,7 @@ ListModel {
 }
 ```
 
-或者省掉Id引用
+#### 或者省掉Id引用
 
 ```
 ListView {
@@ -59,7 +62,7 @@ ListView {
 }
 ```
 
-结合委托方式使用
+#### 结合委托方式使用
 
 ```
 ListView {
@@ -79,7 +82,8 @@ ListView {
 
 ```
 
-自定义Model
+#### 自定义Model
+
 自定义可以继承 `QAbstractTableModel` 或者 `QAbstractItemModel` 具体参见 [qabstractitemmodel](https://doc.qt.io/qt-5/qabstractitemmodel.html)
 
 ```python
@@ -160,7 +164,7 @@ class DBTableModel(QAbstractListModel):
 
 ```
 
-最终在context中设置
+#### 最终在context中设置
 
 ```python
 app = QApplication(sys.argv)
@@ -169,6 +173,12 @@ engine.rootContext().setContextProperty('model', model)
 ```
 
 然后就可以在qml中使用
+
+### json使用
+
+在原型阶段,最好的是使用json mock一些数据,使用qml快速验证正确.
+但是目前看起来 qml 不支持 原生的读取文件和网络 ,需要js 扩展实现
+
 
 1. [qtqml-models](https://doc.qt.io/qt-5/qtqml-models-qmlmodule.html)
 2. [wishlist](https://github.com/LupusAnay/wishlist)
@@ -310,7 +320,10 @@ Rectangle {
 
 ## script
 
+qml 支持的script主要为js, js的简介我就不说了,感兴趣可以自己baidu,
+重点介绍下 qml 中用js 扩展一些能力,可以参见官方文档[qtqml-javascript](https://doc.qt.io/qt-5/qtqml-javascript-imports.html)
 
+![](/docs/blog/static/15683967044870.jpg)
 
 
 
