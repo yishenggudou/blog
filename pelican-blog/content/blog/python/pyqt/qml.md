@@ -11,22 +11,81 @@ QML是一种描述性的脚本语言，文件格式以.qml结尾。语法格式�
 
 # 核心概念
 
+qml简单说就是一种UI描述DSL,常见UI类DSL其实是 XML居多, 但是UI描述只能描述静态的UI,我们需要的UI,一般还需要数据,事件, 所以除了QML,还需 model和script,Delegate
+
 ## model
 
 qml大致上还是遵循`MVC`设计的.
 
 ![](/docs/blog/static/15683005401746.jpg)
 
+modal等价于数据源, 可以被
 
 ## ui组件
 
 ### 分类
 
+qml组件文档如下[qmlmodule](https://doc.qt.io/qt-5/qtquick-controls2-qmlmodule.html)
+
+![](/docs/blog/static/15683662851598.jpg)
+
+#### 布局
+
+[qtquicklayouts](https://doc.qt.io/qt-5/qtquicklayouts-index.html)
+
+
 #### 工具栏
+
+工具栏是`MenuBar`, 工具栏一般在`ApplicationWindow` 下级, 为全局菜单.
+
+https://doc.qt.io/qt-5/qml-qtquick-controls2-menubar.html
+
+https://doc.qt.io/qt-5/qml-qtquick-controls2-menu.html
+
+```
+ApplicationWindow {
+    id: window
+    width: 320
+    height: 260
+    visible: true
+
+    menuBar: MenuBar {
+        Menu {
+            title: qsTr("&File")
+            Action { text: qsTr("&New...") }
+            Action { text: qsTr("&Open...") }
+            Action { text: qsTr("&Save") }
+            Action { text: qsTr("Save &As...") }
+            MenuSeparator { }
+            Action { text: qsTr("&Quit") }
+        }
+        Menu {
+            title: qsTr("&Edit")
+            Action { text: qsTr("Cu&t") }
+            Action { text: qsTr("&Copy") }
+            Action { text: qsTr("&Paste") }
+        }
+        Menu {
+            title: qsTr("&Help")
+            Action { text: qsTr("&About") }
+        }
+    }
+}
+```
+
 
 #### window
 
+window简单说 应该是一个窗口, 属于比较重的一个对象. 一般一个APP至少一个window
+
+[applicationwindow](https://doc.qt.io/qt-5/qml-qtquick-controls2-applicationwindow.html)
+
+![](/docs/blog/static/15683682461827.jpg)
+
+
 #### view
+
+
 
 
 ### 嵌套
@@ -44,6 +103,11 @@ qml大致上还是遵循`MVC`设计的.
 ### ui事件
 
 ### 数据事件
+
+## script
+
+
+
 
 
 # 调试工具
@@ -129,6 +193,10 @@ which qmlscene
 ## OwaViewer
 
 [OwaViewer](https://github.com/HanGee/OwaViewer)
+
+## cheat sheet
+
+![](/docs/blog/static/15683688660378.jpg)
 
 
 # 参考
