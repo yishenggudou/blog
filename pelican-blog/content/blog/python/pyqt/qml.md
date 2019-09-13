@@ -24,7 +24,8 @@ qml大致上还是遵循`MVC`设计的.
 
 modal等价于数据源, 可以被view组件使用,也可以适配后端
 
-[qtqml-models](https://doc.qt.io/qt-5/qtqml-models-qmlmodule.html0
+1. [qtqml-models](https://doc.qt.io/qt-5/qtqml-models-qmlmodule.html)
+2. [wishlist](https://github.com/LupusAnay/wishlist)
 
 ## ui组件
 
@@ -121,17 +122,19 @@ MyCustomText {
 
 in `main.qml`
 
+使用`Loader`
+
 ```
 Rectangle {
-  ...
+
   Loader {
     source:"components/component_example.qml";
   }
-  ...
+
 }
 ```
 
-或者:
+或者 `import` :
 
 ```
 
