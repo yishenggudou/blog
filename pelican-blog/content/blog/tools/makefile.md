@@ -37,7 +37,19 @@ install:editor
 	mv editor $(INSTALL_PATH)
 ```
 
+### 注释
 
+```
+clean-test: ## remove test and coverage artifacts
+    do some
+```
+
+将会在 `make` 时候显示
+
+```
+clean-test           remove test and coverage artifacts
+
+```
 
 ## 场景
 
