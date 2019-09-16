@@ -15,4 +15,6 @@ Status: _published
 
 1. [py65emu](https://github.com/docmarionum1/py65emu)
 2. [pyemu](https://github.com/codypierce/pyemu)
+3. [unicorn](https://github.com/unicorn-engine/unicorn)
+4. [x16-emulator](https://github.com/commanderx16/x16-emulator)
 
