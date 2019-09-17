@@ -17,4 +17,5 @@ Status: _published
 2. [pyemu](https://github.com/codypierce/pyemu)
 3. [unicorn](https://github.com/unicorn-engine/unicorn)
 4. [x16-emulator](https://github.com/commanderx16/x16-emulator)
+5. [chips](https://github.com/floooh/chips)
 
