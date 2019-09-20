@@ -55,5 +55,5 @@ Status: published
 
 1. [UML 各种图总结精华](https://zhuanlan.zhihu.com/p/44518805)
 2. [UML](https://baike.baidu.com/item/%E7%BB%9F%E4%B8%80%E5%BB%BA%E6%A8%A1%E8%AF%AD%E8%A8%80/3160571?fromtitle=UML&fromid=446747&fr=aladdin)
-
+3. [什么是序列图/时序图？](https://juejin.im/post/5cfb7c086fb9a07ecd3d4e53)
 
