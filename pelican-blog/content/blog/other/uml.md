@@ -12,6 +12,9 @@ Status: published
 ![](/docs/blog/static/15689109981874.jpg)
 
 
+![](/docs/blog/static/15689598261100.jpg)
+
+
 # 模板
 
 ## 我们要/能做什么?
