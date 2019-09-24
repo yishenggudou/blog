@@ -5,3 +5,13 @@ Tags: database, oracle
 Summary: oracle基础知识汇总
 Status: published
 
+# 概念
+
+# 知识点
+
+## 分区
+
+
+# 引用
+
+
