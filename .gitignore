@@ -106,3 +106,4 @@ venv.bak/
 /docs/blog/_build/
 /blog/pelican-blog/output
 /pelican-blog/output
+.iml
