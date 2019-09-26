@@ -89,5 +89,6 @@ UML 建模方法通过多种图形（Diagram）和视图（View）提供了多�
 9. [业务架构,功能架构,系统架构,技术架构，应用架构都是什么关系](https://www.zhihu.com/question/28739159)
 10. [PRD 中的「信息结构」与「功能结构」有哪些区别](https://www.zhihu.com/question/21252588)
 11. [如何画出一张合格的技术架构图？](https://segmentfault.com/a/1190000018842701)
+12. [业务架构、应用架构、数据架构和技术架构](https://www.cnblogs.com/Leo_wl/p/8257424.html)
 
 
