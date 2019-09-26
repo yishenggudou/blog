@@ -24,6 +24,10 @@ UML 建模方法通过多种图形（Diagram）和视图（View）提供了多�
 
 最经典的当属4+1视图：逻辑视图开发视图过程视图物理视图场景视图4+1视图提出后，业界也有其它的观点提出，诸如SEI(模块视图、组建和连接件视图、分配视图)、西门子4种视图（概念、模块、代码、执行视图）、以及RM-ODP(企业视图、信息视图、计算视图、工程师图）等。常见的视图除了上述4+1视图外还包括：数据视图、安全视图、实现视图等。
 
+另外还有一种超出软件本身的说法
+![](/docs/blog/static/15694783395943.jpg)
+
+
 以上摘抄自网络,可见怎么做有蛮多的理解,没有标准答案,本文的核心是找出一个适合我的风格的设计套路.用来作为后续推论的依据.
 
 本质上讲UML只是工具, 只是一种描述问题的方式, 不可全搬套UML逻辑,有些事情可能不用UML也能说清楚. 
@@ -79,4 +83,11 @@ UML 建模方法通过多种图形（Diagram）和视图（View）提供了多�
 3. [什么是序列图/时序图？](https://juejin.im/post/5cfb7c086fb9a07ecd3d4e53)
 4. [umlgreatchina.org](http://umlgreatchina.org/_templates/main.aspx?sname=faq&section=q1)
 5. [如何画架构图](https://www.zhihu.com/question/27440059)
+6. [对软件架构的一些思维脑图整理](https://cloud.tencent.com/developer/article/1160306)
+7. [到底什么才是业务架构](https://www.infoq.cn/article/m*aORjCU6gQiIbPCVtoK)
+8. [业务后台系统设计之应用架构图](https://www.jianshu.com/p/9389301b0bc8)
+9. [业务架构,功能架构,系统架构,技术架构，应用架构都是什么关系](https://www.zhihu.com/question/28739159)
+10. [PRD 中的「信息结构」与「功能结构」有哪些区别](https://www.zhihu.com/question/21252588)
+11. [如何画出一张合格的技术架构图？](https://segmentfault.com/a/1190000018842701)
+
 
