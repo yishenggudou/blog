@@ -158,6 +158,21 @@ const post = this.props.match.params.post;
 
 具体用法可以参见 [react-router](https://reacttraining.com/react-router/core/api/Route)
 
+或者在嵌套的内部组件中加上`withRouter` 注解就可以得到当前的参数
+
+```
+@withRouter
+class TaskForm extends Component<ITaskProps, ITaskState> {
+}
+```
+
+然后
+
+```js
+const post = this.props.match.params.post;
+
+```
+
 ## 其他插件
 
 举例`umirc.ts`在你的项目目录里面
