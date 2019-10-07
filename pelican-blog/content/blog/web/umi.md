@@ -158,6 +158,51 @@ const post = this.props.match.params.post;
 
 具体用法可以参见 [react-router](https://reacttraining.com/react-router/core/api/Route)
 
+## 其他插件
+
+举例`umirc.ts`在你的项目目录里面
+
+```typescript
+import { IConfig } from 'umi-types';
+
+// ref: https://umijs.org/config/
+const config: IConfig = {
+  treeShaking: true,
+  history: 'hash',
+  plugins: [
+    // ref: https://umijs.org/plugin/umi-plugin-react.html
+    ['umi-plugin-react', {
+      antd: true,
+      dva: false,
+      dynamicImport: false,
+      title: 'I Android controller',
+      dll: false,
+
+      routes: {
+        exclude: [
+          /components\//,
+        ],
+      },
+    }],
+  ],
+};
+
+import MonacoWebpackPlugin from 'monaco-editor-webpack-plugin';
+
+const chainWebpack = (config, { webpack }) => {
+  config.plugin('monaco-editor').use(MonacoWebpackPlugin, [
+    {
+      languages: ['yaml', 'json', 'python'],
+    },
+  ]);
+};
+config.chainWebpack = chainWebpack;
+export default config;
+
+```
+
+我在自动生成的配置文件中加入了`chainWebpack` 来加入 `Monaco` 编辑器的方言支持.
+
 ## 数据交互
 
 数据交互。没找到好的库。
