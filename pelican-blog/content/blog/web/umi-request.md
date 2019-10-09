@@ -1,5 +1,5 @@
 Title: umi-request用法
-Date: 2019-10.09 20:00
+Date: 2019-10-09 20:00
 Category: web
 Tags: umi, web
 Summary: umi-request用法
