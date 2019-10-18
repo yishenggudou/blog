@@ -161,10 +161,42 @@ def main():
 ```
 
 
-# 常见问题
+# 举例
 
-### 设置环境变量
+```
+TAG_TIME = $(shell date '+%Y%m%d%H%M')
+LOCAL_APP_121 = /run/app.1.2.1.tar
+LOCAL_APP_121_GZ = /run/app.1.2.1.tar.gz
+OSS_APP_121 = oss://app-images/1.2.1/app.1.2.1.tar.${TAG_TIME}.gz
+APP_IMAGE_121 = app-all-in-one:1.2.1
 
+OSS_CONFIG_ID =''
+OSS_CONFIG_KEY =''
+OSS_CONFIG_HOST= ''
+
+
+.PHONY: help
+
+help:
+	@python -c "import re;help='\n'.join([line.replace('##','\n\t') for line in open('Makefile').readlines() if re.search('^[a-zA-Z0-9\-\_]*?\:[\s\S]*?$$',line,flags=re.I)]);print help"
+
+.DEFAULT_GOAL := help
+
+
+build-app121: ## build app 121 image
+	docker build -t ${APP_IMAGE_121} .
+	date '+%Y%m%d%H%M' > /run/1.2.1.last_build.txt
+
+upload_app121: ## upload app 121 to oss
+	if [ -e ${LOCAL_APP_121} ]; then rm -f ${LOCAL_APP_121};fi
+	if [ -e ${LOCAL_APP_121_GZ} ]; then rm -f ${LOCAL_APP_121_GZ}; fi
+	docker save --output  ${LOCAL_APP_121} ${APP_IMAGE_121}
+	gzip ${LOCAL_APP_121}
+	osscmd config  --id=${OSS_CONFIG_ID} --key=${OSS_CONFIG_KEY} --host=${OSS_CONFIG_HOST}
+	osscmd mkdir oss://app-images/1.2.1
+	osscmd put ${LOCAL_APP_121_GZ} ${OSS_APP_121}
+	osscmd list oss://app-images/1.2.1
+```
 
 
 # 引用
