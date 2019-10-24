@@ -3,6 +3,7 @@ Date: 2019-10-24 10:02
 Category: java
 Tags: java, lombok, auto
 Summary: Lombok 用法
+Status: published
 
 # 背景
 
