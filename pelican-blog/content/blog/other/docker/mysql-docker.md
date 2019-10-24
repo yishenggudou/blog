@@ -58,6 +58,8 @@ set global wait_timeout=180000;
 # binlog
 
 ```sql
-
+show variables like 'log_%'; 
 ```
+
+# 
 
