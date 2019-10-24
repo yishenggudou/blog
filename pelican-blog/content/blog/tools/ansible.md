@@ -7,22 +7,87 @@ Status: published
 
 # 背景
 
+最近做db相关的工作,需要构造各种数据源,由于需要在不确定的机器上伪造各种不确定的数据库版本,这个时候我想到了ansible
+
 # 介绍
+
+官方的介绍可以参见:
 
 <iframe allowtransparency="true" title="Wistia video player" allowFullscreen frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" src="https://fast.wistia.net/embed/iframe/qrqfj371b6" width="400" height="225"></iframe>
 
+核心概念图可以参考:
+
+![](/docs/blog/static/15719200978290.jpg)
+
+
+```
+ansible -h
+Usage: ansible <host-pattern> [options]
+
+Define and run a single task 'playbook' against a set of hosts
+```
+
+先指定 匹配 host 然后再执行操作.
+
+我觉得整个ansible有点像模式匹配,先匹配,再推演.
+
+# 用法
+
 ## 安装
 
+```
+pip install -U ansible==2.8.6
+```
+
+
 ## 生成项目
+
+这里推荐[ansible-generator](https://pypi.org/project/ansible-generator/)来生成项目,经过测试,这里生成的是满足官方最佳实践的.
 
 ```
 pip install -U ansible-generator
 ```
 
-###
+官方的样板工程可以参见 [ansible/ansible-examples](https://github.com/ansible/ansible-examples)
+
+### 生成工程
+
+```
+ansible-generate -p testcluster
+```
+### 生成角色
+
+生成角色需要指定项目名
+
+```
+ansible-generate -r pg -p testcluster
+```
 
 
-# 用法
+## 常见用法
+
+### 使用task
+
+### 使用playbook
+
+### 远程命令
+
+```
+ansible test -a 'df -h' -i hosts -u admin --extra-vars "ansible_ssh_pass=admin"
+```
+
+
+
+
+### 在参数中覆盖变量
+
+```
+ --extra-vars "ansible_ssh_user=admin ansible_ssh_pass=admin"
+```
+
+### 切换到root
+
+
 
 # 引用
 
@@ -31,4 +96,8 @@ pip install -U ansible-generator
 3. [jdauphant/awesome-ansible](https://github.com/jdauphant/awesome-ansible)
 4. [awesome-devops/awesome-ansible](https://github.com/awesome-devops/awesome-ansible)
 5. [ansible-generator](https://pypi.org/project/ansible-generator/)
+6. [playbooks_best_practices](https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html)
+7. [使用 Ansible 高效交付 Docker 容器](https://www.ibm.com/developerworks/cn/cloud/library/cl-provision-docker-containers-ansible/index.html)
+8. [ansilbe-docker_module](https://docs.ansible.com/ansible/2.6/modules/docker_module.html)
+9. [Ansible入门](https://getansible.com/advance/playbook/includeyu_ju)
 
