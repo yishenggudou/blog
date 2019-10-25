@@ -61,5 +61,9 @@ set global wait_timeout=180000;
 show variables like 'log_%'; 
 ```
 
-# 
+# charset
+
+```sql
+show variables like '%char%';
+```
 

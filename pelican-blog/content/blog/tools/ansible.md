@@ -31,6 +31,10 @@ Define and run a single task 'playbook' against a set of hosts
 
 我觉得整个ansible有点像模式匹配,先匹配,再推演.
 
+## 核心概念
+
+## 
+
 # 用法
 
 ## 安装
@@ -68,7 +72,31 @@ ansible-generate -r pg -p testcluster
 
 ### 使用task
 
+task为单个任务,定义方式
+
+```
+```
+
+执行方式
+
+```
+```
+
 ### 使用playbook
+
+定义playbook
+
+```
+
+```
+
+使用playbook
+
+```
+ansible all -i vyos.example.net, -c network_cli -u my_vyos_user -k -m vyos_facts -e ansible_network_os=vyos
+```
+
+> `-e` 为指定变量值
 
 ### 远程命令
 
@@ -87,7 +115,34 @@ ansible test -a 'df -h' -i hosts -u admin --extra-vars "ansible_ssh_pass=admin"
 
 ### 切换到root
 
+```yaml
+-   name: Install antman
+    shell: |
+        cd /tmp/
+    become: true
+    become_user: root
+```
 
+命令行
+
+```
+--extra-vars='ansible_become_pass= XXXXXXX
+
+
+```
+### know host 问题
+
+```
+Using a SSH password instead of a key is not possible because Host Key checking is enabled and sshpass does not support this.  Please add this host's fingerprint to your known_hosts file to manage this host.
+
+```
+
+添加`ansible.cfg`
+
+```
+[defaults]
+host_key_checking = false
+```
 
 # 引用
 
@@ -100,4 +155,5 @@ ansible test -a 'df -h' -i hosts -u admin --extra-vars "ansible_ssh_pass=admin"
 7. [使用 Ansible 高效交付 Docker 容器](https://www.ibm.com/developerworks/cn/cloud/library/cl-provision-docker-containers-ansible/index.html)
 8. [ansilbe-docker_module](https://docs.ansible.com/ansible/2.6/modules/docker_module.html)
 9. [Ansible入门](https://getansible.com/advance/playbook/includeyu_ju)
+10. [playbooks_roles](https://ansible-tran.readthedocs.io/en/latest/docs/playbooks_roles.html)
 

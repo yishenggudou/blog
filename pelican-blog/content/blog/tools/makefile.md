@@ -160,6 +160,23 @@ def main():
 
 ```
 
+### 参数
+
+```
+build:  
+    @read -p "Enter Module Name:" module; \  
+    module_dir=./modules/$$module; \
+    mkdir -p $$module_dir/build
+```
+
+确认参数是否存在
+
+```
+build:
+	ifndef current_branch
+	$(error current_branch is not set use current_branch=feature_unit_test_support)
+	endif
+```
 
 # 举例
 
