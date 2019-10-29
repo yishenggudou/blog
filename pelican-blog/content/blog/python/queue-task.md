@@ -7,7 +7,7 @@ Status: published
 
 # 背景
 
-单体软件
+分布式任务调度,
 
 # 对比
 
