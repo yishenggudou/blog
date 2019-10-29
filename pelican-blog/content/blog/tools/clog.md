@@ -15,7 +15,9 @@ cloc counts blank lines, comment lines, and physical lines of source code in man
 
 ## 用法
 
-`cloc .`
+```
+cloc .
+```
 
 结果
 
