@@ -28,7 +28,8 @@ test2_session = Session(test2_engine)
 ```python
 session = Session(test1_engine)
 Table1 = odc_metadata.tables.get("table1")
-test1_session(Table1).filter(id=id).first()
+test1_session(Table1).filter_by(id=id).first()
+test1_session(Table1).filter(Table1.id==id).first()
 
 ```
 
