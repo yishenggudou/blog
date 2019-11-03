@@ -23,6 +23,12 @@ test1_session = Session(test1_engine)
 test2_session = Session(test2_engine)
 ```
 
+也可以这样 
+
+```
+MyTable = Table('target_table', metadata, autoload=True, autoload_with=engine)
+```
+
 ## 查询
 
 ```python
