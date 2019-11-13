@@ -178,6 +178,19 @@ build:
 	endif
 ```
 
+或者使用shell
+
+```
+DB_TYPE = `arg="$(filter-out $@,$(MAKECMDGOALS))";IFS=' ' read -a arg_array <<< "$${arg}" && echo $${arg_array[0]}`
+DB_VERSION =  `arg="$(filter-out $@,$(MAKECMDGOALS))";IFS=' ' read -a arg_array <<< "$${arg}" && echo $${arg_array[1]}`
+
+%:
+	@:
+
+build: ## build file image
+	echo $(call DB_TYPE,defaultstring)
+```
+
 # 举例
 
 ```
