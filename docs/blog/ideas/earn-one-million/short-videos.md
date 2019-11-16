@@ -106,6 +106,8 @@ https://github.com/Mongkii/RMind
 
 https://video-react.js.org/components/player/
 
+https://github.com/mahmoud/awesome-python-applications#tag-video
+
 ### AndroidViewClient
 
 
