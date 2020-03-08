@@ -26,4 +26,6 @@ Status: published
 1. [huey](https://github.com/coleifer/huey)
 2. [apscheduler](https://apscheduler.readthedocs.io/en/latest/userguide.html)
 3. [dask](https://github.com/dask/dask)
+4. [awesome-flask](https://github.com/humiaozuzu/awesome-flask#task-queue)
+5. [background-jobs-with-flask](https://smirnov-am.github.io/background-jobs-with-flask/)
 
