@@ -5,6 +5,7 @@ rm -vrf ./dist
 mkdir -p dist
 cp -rf ./landing-page/* ./dist
 cd ./pelican-blog
+. ./venv/bin/activate
 make html
 cd -
 pwd
