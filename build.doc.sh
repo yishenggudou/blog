@@ -16,6 +16,8 @@ cp -vrf ./pelican-blog/output/docs/* ./dist/docs/
 pwd
 mkdir -p /usr/share/nginx/html/blog/
 cp -vrf ./dist/*  /usr/share/nginx/html/blog/
+#ln -s /usr/share/nginx/html/blog /usr/share/nginx/html/blog
+#ln
 chmod -R 777 /usr/share/nginx/html/blog/
 echo 'finish ...'
 
