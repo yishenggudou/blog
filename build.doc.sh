@@ -14,7 +14,9 @@ pwd
 cp -vrf ./pelican-blog/output/* ./dist/docs/blog/
 cp -vrf ./pelican-blog/output/docs/* ./dist/docs/
 pwd
-chmod -R 777 ./dist/
+mkdir -p /usr/share/nginx/html/blog/
+cp -vrf ./dist/*  /usr/share/nginx/html/blog/
+chmod -R 777 /usr/share/nginx/html/blog/
 echo 'finish ...'
 
 #make clean html
