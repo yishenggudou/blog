@@ -12,5 +12,6 @@ build:
 	echo "will build... "
 	git pull
 	./build.doc.sh
-	cp -vf blog.conf /etc/nginx/conf.d/
+	rm /etc/nginx/conf.d/blog.conf|true
+	cp -vf *.conf /etc/nginx/conf.d/
 	service nginx reload
