@@ -7,6 +7,10 @@ all:
 	echo "  deploy-product			deploy all files"
 	echo "  build-static			build all static"
 
+doc:
+	echo "will build... "
+	git pull
+	./build.doc.sh
 
 build:
 	echo "will build... "
