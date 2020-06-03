@@ -18,3 +18,6 @@ build:
 	./build.doc.sh
 	cp -vf *.conf /etc/nginx/conf.d/
 	service nginx reload
+
+release:
+	ssh root@106.53.70.37 'cd /root/apps/blog && make build'
