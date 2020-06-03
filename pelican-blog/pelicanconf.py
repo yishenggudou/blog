@@ -8,7 +8,7 @@ https://raw.githubusercontent.com/getpelican/pelican/master/samples/pelican.conf
 """
 AUTHOR = u'timger'
 SITENAME = u'来时做李白'
-SITEURL = '/docs/blog/'
+SITEURL = '/'
 FEED_DOMAIN = SITEURL
 
 PATH = 'content'
@@ -39,7 +39,7 @@ TIMEZONE = 'Asia/Shanghai'
 DEFAULT_LANG = u'zh'
 
 # Feed generation is usually not desired when developing
-FEED_DOMAIN = "http://timger.com.cn/docs/blog/"
+FEED_DOMAIN = "http://blog.dafengstudio.com/"
 FEED_ALL_ATOM = ('feeds/all.atom.xml')
 CATEGORY_FEED_ATOM = ('feeds/{slug}.atom.xml')
 TRANSLATION_FEED_ATOM = None
