@@ -91,6 +91,10 @@ PLUGINS = [
     'sitemap',
     'gravatar',
     'tag_cloud',
+    #'matplotlib.sphinxext.only_directives',
+    #'matplotlib.sphinxext.plot_directive',
+    #'IPython.sphinxext.ipython_directive',
+    #'IPython.sphinxext.ipython_console_highlighting',
     'render_math']
 
 SITEMAP = {

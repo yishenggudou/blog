@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 cd $(dirname $0)
 DIR=$(pwd)
-rm -vrf ./dist
+rm -rf ./dist
 mkdir -p dist
 cp -rf ./landing-page/* ./dist
 if [ -e ./venv/bin/activate ]
@@ -17,17 +17,17 @@ pip install -r requirements.txt
 make html
 cd -
 pwd
-rm -vrf ./dist/docs/blog
+rm -rf ./dist/docs/blog
 mkdir -p ./dist/docs/blog
 pwd
-cp -vrf ./pelican-blog/output/* ./dist/docs/blog/
+cp -rf ./pelican-blog/output/* ./dist/docs/blog/
 if [ -d ./pelican-blog/output/docs ]; then
-  cp -vrf ./pelican-blog/output/docs/* ./dist/docs/
+  cp -rf ./pelican-blog/output/docs/* ./dist/docs/
 fi
 pwd
 if [ -d /usr/share/nginx/html ]; then
   mkdir -p /usr/share/nginx/html/blog/
-  cp -vrf ./dist/* /usr/share/nginx/html/blog/
+  cp -rf ./dist/* /usr/share/nginx/html/blog/
   #ln -s /usr/share/nginx/html/blog /usr/share/nginx/html/blog
   #ln
   chmod -R 777 /usr/share/nginx/html/blog/

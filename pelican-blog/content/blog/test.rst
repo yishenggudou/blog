@@ -9,3 +9,4 @@ My super title
 :status: published
 :authors: Alexis Metaireau, Conan Doyle
 :summary: Short version for index and feeds
+
