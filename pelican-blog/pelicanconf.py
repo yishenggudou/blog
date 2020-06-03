@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
-from __future__ import unicode_literals
 
 """
 http://docs.getpelican.com/en/4.1.1/settings.html
@@ -8,7 +7,7 @@ https://docs.getpelican.com/en/4.1.1/settings.html
 https://raw.githubusercontent.com/getpelican/pelican/master/samples/pelican.conf.py
 """
 AUTHOR = u'timger'
-SITENAME = u'\u6765\u4e16\u505a\u674e\u767d'
+SITENAME = u'来时做李白'
 SITEURL = '/docs/blog/'
 FEED_DOMAIN = SITEURL
 
@@ -83,10 +82,16 @@ DEFAULT_PAGINATION = 10
 # RELATIVE_URLS = True
 THEME = 'theme'
 
-MARKUP = ('md', 'ipynb')
+MARKUP = ('md', 'ipynb', 'rst')
 
 PLUGIN_PATHS = ['./plugins']
-PLUGINS = ['pelican-ipynb.markup', 'assets', 'sitemap', 'gravatar', 'tag_cloud', 'render_math']
+PLUGINS = [
+    'pelican-ipynb.markup',
+    'assets',
+    'sitemap',
+    'gravatar',
+    'tag_cloud',
+    'render_math']
 
 SITEMAP = {
     'exclude': ['tag/', 'category/'],
@@ -131,7 +136,7 @@ PYGMENTS_RST_OPTIONS = {
 }
 
 # static
-SITEURL = "http://timger.com.cn/docs/blog/"
+SITEURL = "http://blog.dafengstudio.com/"
 STATIC_PATHS = ['static', 'docs', 'slides', 'pdfs', 'images']
 
 #

@@ -64,7 +64,7 @@ instance/
 .scrapy
 
 # Sphinx documentation
-docs/_build/
+bak/_build/
 
 # PyBuilder
 target/
@@ -103,7 +103,7 @@ venv.bak/
 # mypy
 .mypy_cache/
 .idea
-/docs/blog/_build/
+/bak/blog/_build/
 /blog/pelican-blog/output
 /pelican-blog/output
 .iml

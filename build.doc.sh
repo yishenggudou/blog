@@ -1,26 +1,38 @@
 #!/usr/bin/env bash
 cd $(dirname $0)
-DIR=`pwd`
+DIR=$(pwd)
 rm -vrf ./dist
 mkdir -p dist
 cp -rf ./landing-page/* ./dist
+if [ -e ./venv/bin/activate ]
+then
+  . ./venv/bin/activate
+fi
 cd ./pelican-blog
-. ./venv/bin/activate
+if [ -e ./venv/bin/activate ]
+then
+  . ./venv/bin/activate
+fi
+pip install -r requirements.txt
 make html
 cd -
 pwd
+rm -vrf ./dist/docs/blog
 mkdir -p ./dist/docs/blog
 pwd
 cp -vrf ./pelican-blog/output/* ./dist/docs/blog/
-cp -vrf ./pelican-blog/output/docs/* ./dist/docs/
+if [ -d ./pelican-blog/output/docs ]; then
+  cp -vrf ./pelican-blog/output/docs/* ./dist/docs/
+fi
 pwd
-mkdir -p /usr/share/nginx/html/blog/
-cp -vrf ./dist/*  /usr/share/nginx/html/blog/
-#ln -s /usr/share/nginx/html/blog /usr/share/nginx/html/blog
-#ln
-chmod -R 777 /usr/share/nginx/html/blog/
-echo 'finish ...'
-
+if [ -d /usr/share/nginx/html ]; then
+  mkdir -p /usr/share/nginx/html/blog/
+  cp -vrf ./dist/* /usr/share/nginx/html/blog/
+  #ln -s /usr/share/nginx/html/blog /usr/share/nginx/html/blog
+  #ln
+  chmod -R 777 /usr/share/nginx/html/blog/
+  echo 'finish ...'
+fi
 #make clean html
 #rc=$?; if [[ ${rc} != 0 ]]; then exit 1 ${rc}; fi
 #cd -
