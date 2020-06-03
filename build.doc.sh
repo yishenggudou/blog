@@ -13,13 +13,13 @@ if [ -e ./venv/bin/activate ]
 then
   . ./venv/bin/activate
 fi
-pip install -r requirements.txt
+pip install -r requirements.txt >> /dev/null
 make html
 cd -
-pwd
+#pwd
 rm -rf ./dist/docs/blog
 mkdir -p ./dist/docs/blog
-pwd
+#pwd
 cp -rf ./pelican-blog/output/* ./dist/docs/blog/
 if [ -d ./pelican-blog/output/docs ]; then
   cp -rf ./pelican-blog/output/docs/* ./dist/docs/

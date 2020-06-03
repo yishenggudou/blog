@@ -7,7 +7,7 @@ https://docs.getpelican.com/en/4.1.1/settings.html
 https://raw.githubusercontent.com/getpelican/pelican/master/samples/pelican.conf.py
 """
 AUTHOR = u'timger'
-SITENAME = u'来时做李白'
+SITENAME = u'大风实验室产品系列'
 SITEURL = '/'
 FEED_DOMAIN = SITEURL
 
@@ -91,10 +91,11 @@ PLUGINS = [
     'sitemap',
     'gravatar',
     'tag_cloud',
-    #'matplotlib.sphinxext.only_directives',
-    #'matplotlib.sphinxext.plot_directive',
-    #'IPython.sphinxext.ipython_directive',
-    #'IPython.sphinxext.ipython_console_highlighting',
+    # 'matplotlib.sphinxext.only_directives',
+    # 'matplotlib.sphinxext.plot_directive',
+    # 'IPython.sphinxext.ipython_directive',
+    # 'IPython.sphinxext.ipython_console_highlighting',
+    'timger_directive.timger_directive',
     'render_math']
 
 SITEMAP = {
