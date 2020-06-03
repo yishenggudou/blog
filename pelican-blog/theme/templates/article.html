@@ -14,7 +14,7 @@
     {% elif article.headline %}
         <meta name="description" content="{{ article.headline }}">
     {% elif article.summary %}
-        <meta name="description" content="{{ article.summary }}">
+        <meta name="description" content="{{ article.summary|striptags|truncate(140) }}">
     {% endif %}
 
     {% for author in article.authors %}
@@ -52,7 +52,7 @@
         {% elif article.headline %}
             <meta name="twitter:description" content="{{ article.headline }}">
         {% else %}
-            <meta name="twitter:description" content="{{ article.summary }}">
+            <meta name="twitter:description" content="{{ article.summary|striptags|truncate(140) }}">
         {% endif %}
     {% endfor %}
 {% endblock %}
@@ -70,7 +70,7 @@
         {% elif article.headline %}
             <meta property="og:description" content="{{ article.headline }}">
         {% elif article.summary %}
-            <meta property="og:description" content="{{ article.summary }}">
+            <meta property="og:description" content="{{ article.summary|striptags|truncate(140) }}">
         {% endif %}
 
         {% if article.og_image %}
@@ -233,7 +233,7 @@
                         <section class="post-nav-teaser">
                             <i class="ic ic-arrow-left"></i>
                                 <h2 class="post-nav-title">{{ article.next_article.title }}</h2>
-                            <p class="post-nav-excerpt">{{ article.next_article.summary }}</p>
+                            <p class="post-nav-excerpt">{{ article.next_article.summary|striptags|truncate(90) }}</p>
                         </section>
                     </a>
                     {% endif %}
@@ -242,7 +242,7 @@
                         <section class="post-nav-teaser">
                             <i class="ic ic-arrow-right"></i>
                                 <h2 class="post-nav-title">{{ article.prev_article.title }}</h2>
-                            <p class="post-nav-excerpt">{{ article.prev_article.summary }}</p>
+                            <p class="post-nav-excerpt">{{ article.prev_article.summary|striptags|truncate(90) }}</p>
                         </section>
                     </a>
                     {% endif %}
