@@ -1,6 +1,6 @@
 .SILENT:
 .PHONY: all clean current doc doc-srv serve tox
-
+default: release ;
 
 all:
 	echo ""
@@ -20,4 +20,6 @@ build:
 	service nginx reload
 
 release:
+	git commit -a -m 'auto release commit'
+	git push origin master
 	ssh root@106.53.70.37 'cd /root/apps/blog && make build'
