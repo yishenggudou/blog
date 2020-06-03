@@ -1,0 +1,10 @@
+{
+  "python.pythonPath": "../venv/bin/python",
+  "restructuredtext.confPath": "${workspaceFolder}",
+  "editor.detectIndentation": false,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 3,
+  "window.title": "个人博客草稿箱",
+  "pasteImage.path": "${currentFileDir}/images",
+  "pasteImage.basePath": "${currentFileDir}"
+}
