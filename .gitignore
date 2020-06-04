@@ -107,3 +107,4 @@ venv.bak/
 /blog/pelican-blog/output
 /pelican-blog/output
 .iml
+/drafts/_build
