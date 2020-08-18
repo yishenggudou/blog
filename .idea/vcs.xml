@@ -3,5 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/pelican-blog/pelican-plugins" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/pelican-blog/plugins/ipynb" vcs="Git" />
   </component>
 </project>
