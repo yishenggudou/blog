@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Accessing User Input</title>
+    
+    <link rel="stylesheet" href="_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" /> 
+  </head>
+  <body role="document">
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="db.html" title="Accessing the database"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to web.py’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">web.py 0.37 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="accessing-user-input">
+<h1>Accessing User Input</h1>
+<p>While building web applications, one basic and important thing is to respond to the user input that is sent to the server.</p>
+<p>Web.py makes it easy to access that whether it is parameters in the url (<cite>GET</cite> request) or the form data (<cite>POST</cite> or <cite>PUT</cite> request). The <cite>web.input()</cite> method returns a dictionary-like object (more specifically a <cite>web.storage</cite> object) that contains the user input, whatever the request method is.</p>
+<p>To access the URL parameters (?key=value) from the <cite>web.input</cite> object, just use <cite>web.input().key</cite>.</p>
+<div class="section" id="get">
+<h2>GET</h2>
+<p>For a URL which looks like <cite>/page?id=1&amp;action=edit</cite>, you do</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Page</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">GET</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">web</span><span class="o">.</span><span class="n">input</span><span class="p">()</span>
+        <span class="nb">id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>   <span class="c1"># all the inputs are now strings. Cast it to int, to get integer.</span>
+        <span class="n">action</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">action</span>
+        <span class="o">...</span>
+</pre></div>
+</div>
+<p><cite>KeyError</cite> exception is thrown if <cite>key</cite> is not there in the URL parameters.
+Web.py makes it easier to handle that with default values to web.input().</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Page</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">GET</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">web</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">action</span><span class="o">=</span><span class="s1">&#39;read&#39;</span><span class="p">)</span>
+        <span class="nb">id</span><span class="p">,</span> <span class="n">action</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">id</span><span class="p">),</span> <span class="n">data</span><span class="o">.</span><span class="n">action</span>
+        <span class="o">...</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="post">
+<h2>POST</h2>
+<p>It works exactly the same way with POST method. If you have a form with <cite>name</cite> and <cite>password</cite> elements, you would do</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Login</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">POST</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">web</span><span class="o">.</span><span class="n">input</span><span class="p">()</span>
+        <span class="n">name</span><span class="p">,</span> <span class="n">password</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">password</span>
+        <span class="o">...</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="multiple-inputs-with-same-name">
+<h2>Multiple inputs with same name</h2>
+<p>What if you have a URL which looks like <cite>/page?id=1&amp;id=2&amp;id=3</cite> or you have a form with multiple selects? What would <cite>web.input().id</cite> give us? It simply swallows all but one value. But to let web.input() know that we&#8217;re expecting more values with the same name is simple. Just pass <cite>[]</cite> as the default argument for that name.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Page</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">GET</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">web</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="p">[])</span>
+        <span class="n">ids</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">id</span>         <span class="c1"># now, `ids` is a list with all the `id`s.</span>
+        <span class="o">...</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="file-uploads">
+<h2>File uploads</h2>
+<p>Uploading files is easy with web.py. <cite>web.input()</cite> takes care of that too. Just make sure that the upload form has an attribute enctype=&#8221;multipart/form-data&#8221;. The <cite>input()</cite> gives you <cite>filename</cite> and <cite>value</cite>, which are the uploaded file name and the contents of it, respectively.
+To make things simpler, it also gives you <cite>file</cite>, a file-like object if you pass <cite>myfile={}</cite> where <cite>myfile</cite> is the name of the input element in your form.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Upload</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">GET</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">render</span><span class="o">.</span><span class="n">upload</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">POST</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+         <span class="n">data</span> <span class="o">=</span> <span class="n">web</span><span class="o">.</span><span class="n">input</span><span class="p">(</span><span class="n">myfile</span><span class="o">=</span><span class="p">{})</span>
+         <span class="n">fp</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">myfile</span>
+         <span class="n">save</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span>   <span class="c1"># fp.filename, fp.read() gives name and contents of the file</span>
+         <span class="o">...</span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Upload</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="o">...</span>
+
+    <span class="k">def</span> <span class="nf">POST</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+         <span class="n">data</span> <span class="o">=</span> <span class="n">web</span><span class="o">.</span><span class="n">input</span><span class="p">()</span> <span class="c1"># notice that `myfile={}` is missing here.</span>
+         <span class="n">fp</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">myfile</span>
+         <span class="n">save</span><span class="p">(</span><span class="n">fp</span><span class="o">.</span><span class="n">filename</span><span class="p">,</span> <span class="n">fp</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+         <span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &copy; Copyright .
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.5.
+    </div>
+  </body>
+</html>

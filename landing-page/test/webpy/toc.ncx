@@ -1,0 +1,308 @@
+<?xml version="1.0"?>
+<ncx version="2005-1" xmlns="http://www.daisy.org/z3986/2005/ncx/">
+  <head>
+    <meta name="dtb:uid" content="unknown"/>
+    <meta name="dtb:depth" content="3"/>
+    <meta name="dtb:totalPageCount" content="0"/>
+    <meta name="dtb:maxPageNumber" content="0"/>
+  </head>
+  <docTitle>
+    <text>web.py 0.37 documentation</text>
+  </docTitle>
+  <navMap>
+    <navPoint id="navPoint1" playOrder="1">
+      <navLabel>
+        <text>Welcome to web.py&#39;s documentation!</text>
+      </navLabel>
+      <content src="index.html" />
+    </navPoint>
+    <navPoint id="navPoint2" playOrder="2">
+      <navLabel>
+        <text>Accessing User Input</text>
+      </navLabel>
+      <content src="input.html" />
+      <navPoint id="navPoint3" playOrder="2">
+        <navLabel>
+          <text>Accessing User Input</text>
+        </navLabel>
+        <content src="input.html" />
+      </navPoint>
+      <navPoint id="navPoint4" playOrder="3">
+        <navLabel>
+          <text>GET</text>
+        </navLabel>
+        <content src="input.html#get" />
+      </navPoint>
+      <navPoint id="navPoint5" playOrder="4">
+        <navLabel>
+          <text>POST</text>
+        </navLabel>
+        <content src="input.html#post" />
+      </navPoint>
+      <navPoint id="navPoint6" playOrder="5">
+        <navLabel>
+          <text>Multiple inputs with same name</text>
+        </navLabel>
+        <content src="input.html#multiple-inputs-with-same-name" />
+      </navPoint>
+      <navPoint id="navPoint7" playOrder="6">
+        <navLabel>
+          <text>File uploads</text>
+        </navLabel>
+        <content src="input.html#file-uploads" />
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint8" playOrder="7">
+      <navLabel>
+        <text>Accessing the database</text>
+      </navLabel>
+      <content src="db.html" />
+      <navPoint id="navPoint9" playOrder="7">
+        <navLabel>
+          <text>Accessing the database</text>
+        </navLabel>
+        <content src="db.html" />
+      </navPoint>
+      <navPoint id="navPoint10" playOrder="8">
+        <navLabel>
+          <text>Create database object</text>
+        </navLabel>
+        <content src="db.html#create-database-object" />
+        <navPoint id="navPoint11" playOrder="8">
+          <navLabel>
+            <text>Create database object</text>
+          </navLabel>
+          <content src="db.html#create-database-object" />
+        </navPoint>
+        <navPoint id="navPoint12" playOrder="9">
+          <navLabel>
+            <text>Multiple databases</text>
+          </navLabel>
+          <content src="db.html#multiple-databases" />
+        </navPoint>
+      </navPoint>
+      <navPoint id="navPoint13" playOrder="10">
+        <navLabel>
+          <text>Operations</text>
+        </navLabel>
+        <content src="db.html#operations" />
+        <navPoint id="navPoint14" playOrder="10">
+          <navLabel>
+            <text>Operations</text>
+          </navLabel>
+          <content src="db.html#operations" />
+        </navPoint>
+        <navPoint id="navPoint15" playOrder="11">
+          <navLabel>
+            <text>Inserting</text>
+          </navLabel>
+          <content src="db.html#inserting" />
+        </navPoint>
+        <navPoint id="navPoint16" playOrder="12">
+          <navLabel>
+            <text>Selecting</text>
+          </navLabel>
+          <content src="db.html#selecting" />
+        </navPoint>
+        <navPoint id="navPoint17" playOrder="13">
+          <navLabel>
+            <text>Updating</text>
+          </navLabel>
+          <content src="db.html#updating" />
+        </navPoint>
+        <navPoint id="navPoint18" playOrder="14">
+          <navLabel>
+            <text>Deleting</text>
+          </navLabel>
+          <content src="db.html#deleting" />
+        </navPoint>
+        <navPoint id="navPoint19" playOrder="15">
+          <navLabel>
+            <text>Multiple Inserts</text>
+          </navLabel>
+          <content src="db.html#multiple-inserts" />
+        </navPoint>
+        <navPoint id="navPoint20" playOrder="16">
+          <navLabel>
+            <text>Advanced querying</text>
+          </navLabel>
+          <content src="db.html#advanced-querying" />
+        </navPoint>
+        <navPoint id="navPoint21" playOrder="17">
+          <navLabel>
+            <text>Transactions</text>
+          </navLabel>
+          <content src="db.html#transactions" />
+        </navPoint>
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint22" playOrder="18">
+      <navLabel>
+        <text>Templating</text>
+      </navLabel>
+      <content src="templating.html" />
+      <navPoint id="navPoint23" playOrder="18">
+        <navLabel>
+          <text>Templating</text>
+        </navLabel>
+        <content src="templating.html" />
+      </navPoint>
+      <navPoint id="navPoint24" playOrder="19">
+        <navLabel>
+          <text>Variable substitution</text>
+        </navLabel>
+        <content src="templating.html#variable-substitution" />
+      </navPoint>
+      <navPoint id="navPoint25" playOrder="20">
+        <navLabel>
+          <text>Newline suppression</text>
+        </navLabel>
+        <content src="templating.html#newline-suppression" />
+      </navPoint>
+      <navPoint id="navPoint26" playOrder="21">
+        <navLabel>
+          <text>Expressions</text>
+        </navLabel>
+        <content src="templating.html#expressions" />
+      </navPoint>
+      <navPoint id="navPoint27" playOrder="22">
+        <navLabel>
+          <text>Comments</text>
+        </navLabel>
+        <content src="templating.html#comments" />
+      </navPoint>
+      <navPoint id="navPoint28" playOrder="23">
+        <navLabel>
+          <text>Code</text>
+        </navLabel>
+        <content src="templating.html#code" />
+      </navPoint>
+      <navPoint id="navPoint29" playOrder="24">
+        <navLabel>
+          <text>Python integration</text>
+        </navLabel>
+        <content src="templating.html#python-integration" />
+      </navPoint>
+      <navPoint id="navPoint30" playOrder="25">
+        <navLabel>
+          <text>Turning Off Filter</text>
+        </navLabel>
+        <content src="templating.html#turning-off-filter" />
+      </navPoint>
+      <navPoint id="navPoint31" playOrder="26">
+        <navLabel>
+          <text>Including / nesting templates</text>
+        </navLabel>
+        <content src="templating.html#including-nesting-templates" />
+      </navPoint>
+      <navPoint id="navPoint32" playOrder="27">
+        <navLabel>
+          <text>Escaping</text>
+        </navLabel>
+        <content src="templating.html#escaping" />
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint33" playOrder="28">
+      <navLabel>
+        <text>Deploying web.py applications</text>
+      </navLabel>
+      <content src="deploying.html" />
+      <navPoint id="navPoint34" playOrder="28">
+        <navLabel>
+          <text>Deploying web.py applications</text>
+        </navLabel>
+        <content src="deploying.html" />
+      </navPoint>
+      <navPoint id="navPoint35" playOrder="29">
+        <navLabel>
+          <text>FastCGI</text>
+        </navLabel>
+        <content src="deploying.html#fastcgi" />
+        <navPoint id="navPoint36" playOrder="29">
+          <navLabel>
+            <text>FastCGI</text>
+          </navLabel>
+          <content src="deploying.html#fastcgi" />
+        </navPoint>
+        <navPoint id="navPoint37" playOrder="30">
+          <navLabel>
+            <text>Configuring lighttpd</text>
+          </navLabel>
+          <content src="deploying.html#configuring-lighttpd" />
+        </navPoint>
+      </navPoint>
+      <navPoint id="navPoint38" playOrder="31">
+        <navLabel>
+          <text>nginx + Gunicorn</text>
+        </navLabel>
+        <content src="deploying.html#nginx-gunicorn" />
+      </navPoint>
+    </navPoint>
+    <navPoint id="navPoint39" playOrder="32">
+      <navLabel>
+        <text>web.py API</text>
+      </navLabel>
+      <content src="api.html" />
+      <navPoint id="navPoint40" playOrder="32">
+        <navLabel>
+          <text>web.py API</text>
+        </navLabel>
+        <content src="api.html" />
+      </navPoint>
+      <navPoint id="navPoint41" playOrder="33">
+        <navLabel>
+          <text>web.application</text>
+        </navLabel>
+        <content src="api.html#module-web.application" />
+      </navPoint>
+      <navPoint id="navPoint42" playOrder="34">
+        <navLabel>
+          <text>web.db</text>
+        </navLabel>
+        <content src="api.html#module-web.db" />
+      </navPoint>
+      <navPoint id="navPoint43" playOrder="35">
+        <navLabel>
+          <text>web.net</text>
+        </navLabel>
+        <content src="api.html#module-web.net" />
+      </navPoint>
+      <navPoint id="navPoint44" playOrder="36">
+        <navLabel>
+          <text>web.form</text>
+        </navLabel>
+        <content src="api.html#module-web.form" />
+      </navPoint>
+      <navPoint id="navPoint45" playOrder="37">
+        <navLabel>
+          <text>web.http</text>
+        </navLabel>
+        <content src="api.html#module-web.http" />
+      </navPoint>
+      <navPoint id="navPoint46" playOrder="38">
+        <navLabel>
+          <text>web.session</text>
+        </navLabel>
+        <content src="api.html#module-web.session" />
+      </navPoint>
+      <navPoint id="navPoint47" playOrder="39">
+        <navLabel>
+          <text>web.template</text>
+        </navLabel>
+        <content src="api.html#module-web.template" />
+      </navPoint>
+      <navPoint id="navPoint48" playOrder="40">
+        <navLabel>
+          <text>web.utils</text>
+        </navLabel>
+        <content src="api.html#module-web.utils" />
+      </navPoint>
+      <navPoint id="navPoint49" playOrder="41">
+        <navLabel>
+          <text>web.webapi</text>
+        </navLabel>
+        <content src="api.html#module-web.webapi" />
+      </navPoint>
+    </navPoint>
+  </navMap>
+</ncx>

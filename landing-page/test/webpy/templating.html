@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Templating</title>
+    
+    <link rel="stylesheet" href="_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" /> 
+  </head>
+  <body role="document">
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="deploying.html" title="Deploying web.py applications"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="db.html" title="Accessing the database"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">web.py 0.37 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="templating">
+<h1>Templating</h1>
+<p>There are almost as many Python templating systems as there are web
+frameworks (and, indeed, it seems like many templating systems are
+adopting web framework-like features). The following are the goals of <cite>templetor</cite>, which is the (codename of) templating system of web.py.</p>
+<ol class="arabic simple">
+<li>The templating system has to <em>look</em> decent. No <code class="docutils literal"><span class="pre">&lt;%#foo#%&gt;</span></code> crud.</li>
+<li>Reuse Python terms and semantics as much as possible.</li>
+<li>Expressive enough to do real computation.</li>
+<li>Usable for any text language, not just HTML and XML.</li>
+</ol>
+<p>And requirements for the implementation as well:</p>
+<ol class="arabic simple" start="4">
+<li>Sandboxable so that you can let untrusted users write templates.</li>
+<li>Simple and fast implementation.</li>
+</ol>
+<p>So here it is.</p>
+<div class="section" id="variable-substitution">
+<h2>Variable substitution</h2>
+<div class="highlight-python"><div class="highlight"><pre><span></span>Look, a $string.
+Hark, an ${arbitrary + expression}.
+Gawk, a $dictionary[key].function(&#39;argument&#39;).
+Cool, a $(limit)ing.
+
+Stop, \$money isn&#39;t evaluated.
+</pre></div>
+</div>
+<p>We use basically the same semantics as (rejected) <a class="reference external" href="http://www.python.org/peps/pep-0215.html">PEP
+215</a><span class="link-target"> [http://www.python.org/peps/pep-0215.html]</span>. Variables can go
+anywhere in a document.</p>
+</div>
+<div class="section" id="newline-suppression">
+<h2>Newline suppression</h2>
+<div class="highlight-python"><div class="highlight"><pre><span></span>If you put a backslash \
+at the end of a line \
+(like these) \
+then there will be no newline.
+</pre></div>
+</div>
+<p>renders as all one line.</p>
+</div>
+<div class="section" id="expressions">
+<h2>Expressions</h2>
+<div class="highlight-python"><div class="highlight"><pre><span></span>Here are some expressions:
+
+$for var in iterator: I like $var!
+
+$if times &gt; max:
+    Stop! In the name of love.
+$else:
+    Keep on, you can do it.
+
+That&#39;s all, folks.
+</pre></div>
+</div>
+<p>All your old Python friends are here: <code class="docutils literal"><span class="pre">if</span></code>, <code class="docutils literal"><span class="pre">while</span></code>, <code class="docutils literal"><span class="pre">for</span></code>,
+<code class="docutils literal"><span class="pre">else</span></code>, <code class="docutils literal"><span class="pre">break</span></code>, <code class="docutils literal"><span class="pre">continue</span></code>, and <code class="docutils literal"><span class="pre">pass</span></code> also act as you&#8217;d
+expect. (Obviously, you can&#8217;t have variables named any of these.) The
+Python code starts at the <code class="docutils literal"><span class="pre">$</span></code> and ends at the <code class="docutils literal"><span class="pre">:</span></code>. The <code class="docutils literal"><span class="pre">$</span></code> has to
+be at the beginning of the line, but that&#8217;s not such a burden because of
+newline suppression (above).</p>
+<p>Also, we&#8217;re very careful about spacing &#8211; all the lines will render with
+no spaces at the beginning. (Open question: what if you want spaces at
+the beginning?) Also, a trailing space might break your code.</p>
+<p>There are a couple changes from Python: <code class="docutils literal"><span class="pre">for</span></code> and <code class="docutils literal"><span class="pre">while</span></code> now take
+an <code class="docutils literal"><span class="pre">else</span></code> clause that gets called if the loop is never evaluated.</p>
+<p>(Possible feature to add: Django-style for loop variables.)</p>
+</div>
+<div class="section" id="comments">
+<h2>Comments</h2>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$# Here&#39;s where we hoodwink the folks at home:
+
+Please enter in your deets:
+
+CC: [       ]  $#this is the important one
+SSN: $#Social Security Number#$ [       ]
+</pre></div>
+</div>
+<p>Comments start with <code class="docutils literal"><span class="pre">$#</span></code> and go to <code class="docutils literal"><span class="pre">#$</span></code> or the end of the line,
+whichever is first.</p>
+</div>
+<div class="section" id="code">
+<h2>Code</h2>
+<p><strong>NOTE: This feature has not been implemented in the current web.py
+implementation of templetor.</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>Sometimes you just need to break out the Python.
+
+$ mapping = {
+$   &#39;cool&#39;: [&#39;nice&#39;, &#39;sweet&#39;, &#39;hot&#39;],
+$   &#39;suck&#39;: [&#39;bad&#39;, &#39;evil&#39;, &#39;awful&#39;]
+$ }
+
+Isn&#39;t that $mapping[thought]?
+That&#39;s$ del mapping $ fine with me.
+
+$ complicatedfunc()
+
+$ for x in bugs:
+    $ if bug.level == &#39;severe&#39;:
+        Ooh, this one is bad.
+        $ continue
+    And there&#39;s $x...
+</pre></div>
+</div>
+<p><strong>Body of loops have to be indented with exactly 4 spaces.</strong></p>
+<p>Code begins with a <code class="docutils literal"><span class="pre">$</span></code> and a space and goes until the next <code class="docutils literal"><span class="pre">$</span></code> or
+the end of the line, whichever comes first. Nothing ever gets output if
+the first character after the <code class="docutils literal"><span class="pre">$</span></code> is a space (so <code class="docutils literal"><span class="pre">complicatedfunc</span></code>
+above doesn&#8217;t write anything to the screen like it might without the
+space).</p>
+</div>
+<div class="section" id="python-integration">
+<h2>Python integration</h2>
+<p>A template begins with a line like this:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$def with (name, title, company=&#39;BigCo&#39;)
+</pre></div>
+</div>
+<p>which declares that the template takes those arguments. (The <code class="docutils literal"><span class="pre">with</span></code>
+keyword is special, like <code class="docutils literal"><span class="pre">def</span></code> or <code class="docutils literal"><span class="pre">if</span></code>.)</p>
+<p><strong>Don&#8217;t forget to put spaces in the definition</strong></p>
+<p>The following <em>will not work</em>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$def with (name,title,company=&#39;BigCo&#39;)
+</pre></div>
+</div>
+<p>Inside Python, the template looks like a function that takes these
+arguments. It returns a storage object with the special property that
+evaluating it as a string returns the value of the body of the template.
+The elements in the storage object are the results of the <code class="docutils literal"><span class="pre">def</span></code>s and
+the <code class="docutils literal"><span class="pre">set</span></code>s.</p>
+<p>Perhaps an example will make this clearer. Here&#8217;s a template, &#8220;entry&#8221;:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$def with (post)
+
+$var title: $post.title
+
+&lt;p&gt;$markdown(post.body)&lt;/p&gt;
+
+&lt;p class=&quot;byline&quot;&gt;by $post.author&lt;/p&gt;
+</pre></div>
+</div>
+<p>Here&#8217;s another; &#8220;base&#8221;:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$def with (self)
+&lt;html&gt;&lt;head&gt;
+  &lt;title&gt;$self.title&lt;/title&gt;
+&lt;/head&gt;&lt;body&gt;
+&lt;h1&gt;$self.title&lt;/h1&gt;
+
+$:self
+&lt;/body&gt;&lt;/html&gt;
+</pre></div>
+</div>
+<p>Now let&#8217;s say we compile both from within Python, the first as
+<code class="docutils literal"><span class="pre">entry</span></code>, the second as <code class="docutils literal"><span class="pre">base</span></code>. Here&#8217;s how we might use them:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="n">base</span><span class="p">(</span> <span class="n">entry</span><span class="p">(</span> <span class="n">post</span> <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">entry</span></code> takes the argument post and returns an object whose string
+value is a bit of HTML showing the post with its title in the property
+<code class="docutils literal"><span class="pre">title</span></code>. <code class="docutils literal"><span class="pre">base</span></code> takes this object and places the title in the
+appropriate place and displays the page itself in the body of the page.
+The Python code prints out the result.</p>
+<p><em>Where did ``markdown`` come from? It wasn&#8217;t passed as an argument.</em> You
+can pass a list of functions and variables to the template compiler to
+be made globally available to templates. <em>Why $:self?</em> See below</p>
+<p>Here&#8217;s an example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">template</span>
+<span class="n">render</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s1">&#39;templates/&#39;</span><span class="p">)</span>
+<span class="n">template</span><span class="o">.</span><span class="n">Template</span><span class="o">.</span><span class="n">globals</span><span class="p">[</span><span class="s1">&#39;len&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">len</span>
+
+<span class="k">print</span> <span class="n">render</span><span class="o">.</span><span class="n">base</span><span class="p">(</span><span class="n">render</span><span class="o">.</span><span class="n">message</span><span class="p">(</span><span class="s1">&#39;Hello, world!&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>The first line imports templetor. The second says that our templates are
+in the directory <code class="docutils literal"><span class="pre">templates/</span></code>. The third give all our templates access
+to the <code class="docutils literal"><span class="pre">len</span></code> function. The fourth grabs the template <code class="docutils literal"><span class="pre">message.html</span></code>,
+passes it the argument <code class="docutils literal"><span class="pre">'Hello,</span> <span class="pre">world!'</span></code>, passes the result of
+rendering it to <a class="reference external" href="http://www.buyitcert.com/mcitp.html">mcitp</a><span class="link-target"> [http://www.buyitcert.com/mcitp.html]</span> the
+template <code class="docutils literal"><span class="pre">base.html</span></code> and prints the result. (If your templates don&#8217;t
+end in <code class="docutils literal"><span class="pre">.html</span></code> or <code class="docutils literal"><span class="pre">.xml</span></code>, templetor will still find them, but it
+won&#8217;t do its automatic HTML-encoding.)</p>
+</div>
+<div class="section" id="turning-off-filter">
+<h2>Turning Off Filter</h2>
+<p>By default <code class="docutils literal"><span class="pre">template.render</span></code> will use <code class="docutils literal"><span class="pre">web.websafe</span></code> filter to do
+HTML-encoding. To turn it off, put a : after the $ as in:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$:form.render()
+</pre></div>
+</div>
+<p>Output from form.render() will be displayed as is.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$:fooBar    $# fooBar = &lt;span&gt;lorem ipsum&lt;/span&gt;
+</pre></div>
+</div>
+<p>Output from variable in template will be displayed as is.</p>
+</div>
+<div class="section" id="including-nesting-templates">
+<h2>Including / nesting templates</h2>
+<p>If you want to nest one template within another, you nest the
+<code class="docutils literal"><span class="pre">render()</span></code> calls, and then include the variable (unfiltered) in the
+page. In your handler:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="n">render</span><span class="o">.</span><span class="n">foo</span><span class="p">(</span><span class="n">render</span><span class="o">.</span><span class="n">bar</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>or (to make things a little more clear):</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">barhtml</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">bar</span><span class="p">()</span>
+<span class="k">print</span> <span class="n">render</span><span class="o">.</span><span class="n">foo</span><span class="p">(</span><span class="n">barhtml</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Then in the template <code class="docutils literal"><span class="pre">foo.html</span></code>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$def with (bar)
+html goes here
+$:bar
+more html
+</pre></div>
+</div>
+<p>This replaces the <code class="docutils literal"><span class="pre">$:bar</span></code> with the output of the <code class="docutils literal"><span class="pre">render.bar()</span></code> call
+(which is why it must be <code class="docutils literal"><span class="pre">$:</span></code>/unfiltered, so that you get un-encoded
+HTML (unless you want something else of course)). You can pass variables
+in, in the same way:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="k">print</span> <span class="n">render</span><span class="o">.</span><span class="n">foo</span><span class="p">(</span><span class="n">render</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">baz</span><span class="p">),</span> <span class="n">qux</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In the template bar (<code class="docutils literal"><span class="pre">bar.html</span></code>):</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$def with (baz)
+bar stuff goes here + baz
+</pre></div>
+</div>
+<p>In template foo (<code class="docutils literal"><span class="pre">foo.html</span></code>):</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$def with (bar, qux)
+html goes here
+$:bar
+Value of qux is $qux
+</pre></div>
+</div>
+</div>
+<div class="section" id="escaping">
+<h2>Escaping</h2>
+<p>web.py automatically escapes any variables used in templates, so that if for some reason name is set to a value containing some HTML, it will get properly escaped and appear as plain text. If you want to turn this off, write $:name instead of $name.</p>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &copy; Copyright .
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.5.
+    </div>
+  </body>
+</html>
