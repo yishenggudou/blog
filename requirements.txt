@@ -90,7 +90,7 @@ pbr==4.2.0
 pelican==4.1.1
 pexpect==4.6.0
 pickleshare==0.7.4
-Pillow==5.4.1
+Pillow==8.2.0
 pkginfo==1.4.2
 plantweb==1.1.0
 pluggy==0.8.1
